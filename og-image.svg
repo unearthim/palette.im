@@ -1,0 +1,62 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#F8F7F4"/>
+  
+  <!-- Decorative color strips - archive of color concept -->
+  <g opacity="0.12">
+    <rect x="0" y="0" width="1200" height="60" fill="#FF00FF"/>
+    <rect x="0" y="60" width="1200" height="60" fill="#00FFFF"/>
+    <rect x="0" y="120" width="1200" height="60" fill="#FFFF00"/>
+    <rect x="0" y="180" width="1200" height="60" fill="#1877F2"/>
+    <rect x="0" y="240" width="1200" height="60" fill="#25D366"/>
+    <rect x="0" y="300" width="1200" height="60" fill="#FF3B30"/>
+    <rect x="0" y="360" width="1200" height="60" fill="#0054E3"/>
+    <rect x="0" y="420" width="1200" height="60" fill="#E01E5A"/>
+    <rect x="0" y="480" width="1200" height="60" fill="#F4B400"/>
+    <rect x="0" y="540" width="1200" height="60" fill="#7FBA00"/>
+    <rect x="0" y="600" width="1200" height="30" fill="#A93400"/>
+  </g>
+  
+  <!-- Main content container -->
+  <g>
+    <!-- Logo/Icon - paint palette -->
+    <circle cx="600" cy="220" r="80" fill="#1A1A1A" opacity="0.08"/>
+    <g transform="translate(600, 220)">
+      <!-- Palette shape -->
+      <ellipse cx="0" cy="0" rx="65" ry="60" fill="#A93400" opacity="0.9"/>
+      <!-- Thumb hole -->
+      <ellipse cx="-35" cy="25" rx="15" ry="18" fill="#F8F7F4"/>
+      <!-- Paint dabs -->
+      <circle cx="-20" cy="-25" r="12" fill="#FF3B30"/>
+      <circle cx="10" cy="-30" r="12" fill="#0054E3"/>
+      <circle cx="35" cy="-15" r="12" fill="#25D366"/>
+      <circle cx="25" cy="15" r="12" fill="#FFFF00"/>
+      <circle cx="-5" cy="25" r="12" fill="#FF00FF"/>
+    </g>
+    
+    <!-- Title -->
+    <text x="600" y="370" font-family="Inter, sans-serif" font-size="96" font-weight="800" fill="#1A1A1A" text-anchor="middle" letter-spacing="-0.02em">
+      palette.im
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="600" y="430" font-family="Lora, serif" font-size="32" font-style="italic" fill="#666666" text-anchor="middle">
+      The Internet Archive of Color
+    </text>
+    
+    <!-- Tagline -->
+    <text x="600" y="490" font-family="Lora, serif" font-size="24" fill="#A93400" text-anchor="middle">
+      Preserving the visual language of digital culture
+    </text>
+    
+    <!-- Bottom accent - color swatches -->
+    <g transform="translate(300, 550)">
+      <rect x="0" y="0" width="80" height="50" rx="6" fill="#0054E3"/>
+      <rect x="100" y="0" width="80" height="50" rx="6" fill="#FF3B30"/>
+      <rect x="200" y="0" width="80" height="50" rx="6" fill="#25D366"/>
+      <rect x="300" y="0" width="80" height="50" rx="6" fill="#1877F2"/>
+      <rect x="400" y="0" width="80" height="50" rx="6" fill="#E01E5A"/>
+      <rect x="500" y="0" width="80" height="50" rx="6" fill="#F4B400"/>
+    </g>
+  </g>
+</svg>

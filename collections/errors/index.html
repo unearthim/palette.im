@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://palette.im/errors#content",
+          "url": "https://palette.im/errors",
+          "name": "Error Messages | palette.im",
+          "description": "The colors of failure—from the Blue Screen of Death to 404 pages. When systems break, they break in very specific shades.",
+          "inLanguage": "en-US",
+          "datePublished": "2025-12-07",
+          "publisher": { "@id": "https://palette.im/#organization" },
+          "isPartOf": { "@id": "https://palette.im/#website" },
+          "author": { "@id": "https://josiest.com/#person" }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://palette.im/#website",
+          "url": "https://palette.im",
+          "name": "palette.im",
+          "description": "The Internet Archive of Color",
+          "publisher": { "@id": "https://palette.im/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://palette.im/#organization",
+          "name": "palette.im",
+          "url": "https://palette.im",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://palette.im/favicon-32x32.png"
+          },
+          "foundingDate": "2024",
+          "sameAs": [
+            "https://twitter.com/palettemuseum",
+            "https://github.com/palette-museum"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://josiest.com/#person",
+          "name": "Josie Jefferson",
+          "url": "https://josiest.com",
+          "jobTitle": "Digital Archaeologist",
+          "affiliation": { "@id": "https://palette.im/#organization" },
+          "sameAs": ["https://notjojo.im"]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <title>Error Messages | palette.im</title>
+    <meta name="title" content="Error Messages | palette.im">
+    <meta name="description" content="The colors of failure—from the Blue Screen of Death to 404 pages. When systems break, they break in very specific shades.">
+    <meta name="keywords" content="error messages, BSOD, 404 pages, system errors, kernel panic, red screen of death, error design">
+    <meta name="author" content="palette.im (An unearth.im Project)">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    
+    <link rel="canonical" href="https://palette.im/errors" />
+    
+    <!-- Webmention Endpoint -->
+    <link rel="webmention" href="https://webmention.io/unearth.im/webmention" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://palette.im/errors">
+    <meta property="og:title" content="Error Messages | palette.im">
+    <meta property="og:description" content="The colors of failure—from the Blue Screen of Death to 404 pages. When systems break, they break in very specific shades.">
+    <meta property="og:image" content="https://palette.im/og-image.png">
+    <meta property="og:site_name" content="palette.im">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://palette.im/errors">
+    <meta property="twitter:title" content="Error Messages | palette.im">
+    <meta property="twitter:description" content="The colors of failure—from the Blue Screen of Death to 404 pages. When systems break, they break in very specific shades.">
+    <meta property="twitter:image" content="https://palette.im/og-image.png">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Brand Color Meta Tags -->
+    <meta name="theme-color" content="#F8F7F4">
+    <meta name="msapplication-TileColor" content="#A93400">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --archive-parchment: #F8F7F4;
+            --archive-ink: #1A1A1A;
+            --archive-charcoal: #2E2E2E;
+            --archive-sienna: #A93400;
+            --archive-grey: #666666;
+            
+            --font-narrative: 'Lora', serif;
+            --font-interface: 'Inter', sans-serif;
+            --font-mono: 'Courier Prime', monospace;
+
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--archive-parchment);
+            color: var(--archive-ink);
+            font-family: var(--font-narrative);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* BREADCRUMB NAV */
+        .breadcrumb-nav {
+            background: white;
+            padding: var(--space-sm) var(--space-md);
+            border-bottom: 1px solid #E6E6E6;
+        }
+
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: var(--font-interface);
+            font-size: 0.85rem;
+        }
+
+        .breadcrumb a {
+            color: var(--archive-grey);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--archive-sienna);
+        }
+
+        .breadcrumb span {
+            margin: 0 0.5rem;
+            color: #CCC;
+        }
+
+        /* HEADER */
+        .page-header {
+            background: linear-gradient(135deg, #CC0000 0%, #660000 100%);
+            color: white;
+            padding: var(--space-xl) var(--space-md);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '⚠';
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-title {
+            font-family: var(--font-interface);
+            font-weight: 800;
+            font-size: 4rem;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--space-md);
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .page-subtitle {
+            font-family: var(--font-narrative);
+            font-style: italic;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-md);
+        }
+
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto var(--space-xl);
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: var(--archive-grey);
+        }
+
+        /* ERROR CARDS */
+        .errors-grid {
+            display: grid;
+            gap: var(--space-lg);
+        }
+
+        .error-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .error-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+
+        .error-mockup {
+            padding: var(--space-lg);
+            position: relative;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: var(--font-mono);
+        }
+
+        .error-icon {
+            font-size: 4rem;
+            margin-bottom: var(--space-md);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        }
+
+        .error-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .error-code {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: var(--space-md);
+        }
+
+        .error-description-line {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+
+        .error-palette {
+            display: flex;
+            height: 100px;
+        }
+
+        .palette-swatch {
+            flex: 1;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: var(--space-sm);
+        }
+
+        .palette-swatch:hover {
+            flex: 1.5;
+        }
+
+        .swatch-label {
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: var(--font-interface);
+            font-size: 0.7rem;
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-weight: 600;
+        }
+
+        .palette-swatch:hover .swatch-label {
+            opacity: 1;
+        }
+
+        .error-content {
+            padding: var(--space-lg);
+        }
+
+        .error-name {
+            font-family: var(--font-interface);
+            font-weight: 800;
+            font-size: 2rem;
+            margin-bottom: var(--space-sm);
+            color: var(--archive-charcoal);
+        }
+
+        .error-metadata {
+            display: flex;
+            gap: var(--space-md);
+            margin-bottom: var(--space-md);
+            flex-wrap: wrap;
+        }
+
+        .metadata-tag {
+            font-family: var(--font-interface);
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            background: var(--archive-parchment);
+            border-radius: 4px;
+            color: var(--archive-grey);
+            font-weight: 600;
+        }
+
+        .error-story {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--archive-charcoal);
+            margin-bottom: var(--space-md);
+        }
+
+        .cultural-note {
+            background: var(--archive-parchment);
+            padding: var(--space-md);
+            border-radius: 8px;
+            border-left: 4px solid var(--archive-sienna);
+        }
+
+        .cultural-note-title {
+            font-family: var(--font-interface);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--archive-sienna);
+            margin-bottom: var(--space-xs);
+        }
+
+        .cultural-note-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--archive-charcoal);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--archive-charcoal);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-family: var(--font-interface);
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        @media (max-width: 768px) {
+            .page-title { font-size: 2.5rem; }
+            .error-mockup { min-height: 220px; padding: var(--space-md); }
+            .error-icon { font-size: 3rem; }
+            .error-title { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb-nav">
+        <div class="breadcrumb">
+            <a href="/">palette.im</a>
+            <span>/</span>
+            <span>Error Messages</span>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1 class="page-title">Error Messages</h1>
+            <p class="page-subtitle">
+                When computers fail, they do it in color. These are the palettes of panic, frustration, and digital doom.
+            </p>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <p class="intro-text">
+            Error screens are some of the most carefully designed—and most dreaded—interfaces in computing history. A specific shade of blue meant your work was gone. Red meant danger. These colors were burned into memory through trauma, repetition, and late-night debugging sessions.
+        </p>
+
+        <div class="errors-grid">
+
+            <!-- Windows BSOD -->
+            <article class="error-card">
+                <div class="error-mockup" style="background: #0000AA; color: white;">
+                    <div class="error-icon">:(</div>
+                    <div class="error-title">A problem has been detected</div>
+                    <div class="error-code">*** STOP: 0x0000007B</div>
+                    <div class="error-description-line">INACCESSIBLE_BOOT_DEVICE</div>
+                </div>
+                
+                <div class="error-palette">
+                    <div class="palette-swatch" style="background: #0000AA;" onclick="copyHex('#0000AA')">
+                        <span class="swatch-label">#0000AA</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #AAAAAA;" onclick="copyHex('#AAAAAA')">
+                        <span class="swatch-label">#AAAAAA</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FFFFFF;" onclick="copyHex('#FFFFFF')">
+                        <span class="swatch-label">#FFFFFF</span>
+                    </div>
+                </div>
+
+                <div class="error-content">
+                    <h2 class="error-name">Windows Blue Screen of Death</h2>
+                    <div class="error-metadata">
+                        <span class="metadata-tag">Windows NT–10 (1993–2016)</span>
+                        <span class="metadata-tag">System Crash</span>
+                    </div>
+                    <p class="error-story">
+                        That exact shade of blue (#0000AA) became the most feared color in computing. When Windows encountered a kernel-mode error it couldn't recover from, it would halt everything and display white text on pure blue. No escape. No save. Just restart and pray. The BSOD was so iconic that it appeared at live demos, in airports, and in Times Square—always at the worst possible moment.
+                    </p>
+                    <div class="cultural-note">
+                        <div class="cultural-note-title">Cultural Impact</div>
+                        <p class="cultural-note-text">
+                            Windows 8 changed the BSOD to a lighter blue (#1273EB) with a sad face emoticon, attempting to make system crashes feel less hostile. Windows 10 briefly introduced a "Green Screen of Death" for Insider builds. But the original deep blue remains the definitive color of catastrophic failure.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Mac Kernel Panic -->
+            <article class="error-card">
+                <div class="error-mockup" style="background: #333333; color: white;">
+                    <div class="error-icon">🚫</div>
+                    <div class="error-title" style="font-size: 1.4rem; margin-bottom: 1.5rem;">
+                        You need to restart your computer.<br>
+                        Hold down the Power button.
+                    </div>
+                    <div class="error-description-line" style="opacity: 0.7;">
+                        Vous devez redémarrer votre ordinateur<br>
+                        Sie müssen den Computer neu starten
+                    </div>
+                </div>
+                
+                <div class="error-palette">
+                    <div class="palette-swatch" style="background: #333333;" onclick="copyHex('#333333')">
+                        <span class="swatch-label">#333333</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #000000;" onclick="copyHex('#000000')">
+                        <span class="swatch-label">#000000</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FFFFFF;" onclick="copyHex('#FFFFFF')">
+                        <span class="swatch-label">#FFFFFF</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #666666;" onclick="copyHex('#666666')">
+                        <span class="swatch-label">#666666</span>
+                    </div>
+                </div>
+
+                <div class="error-content">
+                    <h2 class="error-name">Mac Kernel Panic</h2>
+                    <div class="error-metadata">
+                        <span class="metadata-tag">Mac OS X (2001–2013)</span>
+                        <span class="metadata-tag">System Crash</span>
+                    </div>
+                    <p class="error-story">
+                        Apple's version of the BSOD was more polite but equally devastating. A dark gray overlay with white text and the universal "prohibited" symbol (🚫) in multiple languages. The aesthetic was calm, almost apologetic—but your work was still gone. The kernel panic represented a philosophical difference: Windows screamed in blue; Mac whispered in gray.
+                    </p>
+                    <div class="cultural-note">
+                        <div class="cultural-note-title">Cultural Impact</div>
+                        <p class="cultural-note-text">
+                            Earlier versions displayed scrolling white text on black (Unix-style), but OS X made it "user-friendly." The prohibition icon became synonymous with Mac failures, appearing in tech support forums and troubleshooting guides as shorthand for "your Mac is dead."
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Red Ring of Death -->
+            <article class="error-card">
+                <div class="error-mockup" style="background: #000000; color: white;">
+                    <div class="error-icon" style="color: #CC0000; font-size: 5rem;">◯</div>
+                    <div class="error-title" style="color: #CC0000;">System Error</div>
+                    <div class="error-code">E74 - Hardware Failure</div>
+                    <div class="error-description-line">Contact Xbox Customer Support</div>
+                </div>
+                
+                <div class="error-palette">
+                    <div class="palette-swatch" style="background: #CC0000;" onclick="copyHex('#CC0000')">
+                        <span class="swatch-label">#CC0000</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #000000;" onclick="copyHex('#000000')">
+                        <span class="swatch-label">#000000</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #1A1A1A;" onclick="copyHex('#1A1A1A')">
+                        <span class="swatch-label">#1A1A1A</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FFFFFF;" onclick="copyHex('#FFFFFF')">
+                        <span class="swatch-label">#FFFFFF</span>
+                    </div>
+                </div>
+
+                <div class="error-content">
+                    <h2 class="error-name">Xbox 360 Red Ring of Death</h2>
+                    <div class="error-metadata">
+                        <span class="metadata-tag">Xbox 360 (2005–2010)</span>
+                        <span class="metadata-tag">Hardware Failure</span>
+                    </div>
+                    <p class="error-story">
+                        Three red lights on the Xbox 360's power ring—officially "General Hardware Failure"—became a cultural phenomenon. The console's green LEDs turning red meant overheating, solder failure, and a $100+ repair. Microsoft extended warranties after millions of units failed. That specific red (#CC0000) became shorthand for catastrophic product defect, referenced in memes, forum signatures, and angry YouTube videos.
+                    </p>
+                    <div class="cultural-note">
+                        <div class="cultural-note-title">Cultural Impact</div>
+                        <p class="cultural-note-text">
+                            The RROD cost Microsoft over $1 billion in repairs and replacements. It spawned DIY fix tutorials, "towel trick" urban legends, and countless parodies. The phrase "red ring of death" entered gaming vernacular as the ultimate hardware failure, transcending the Xbox to describe any catastrophic product defect.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- HTTP 404 -->
+            <article class="error-card">
+                <div class="error-mockup" style="background: #F8F8F8; color: #333333; border-top: 8px solid #0066CC;">
+                    <div class="error-icon" style="color: #0066CC;">🔍</div>
+                    <div class="error-title" style="color: #0066CC;">404</div>
+                    <div class="error-code" style="color: #666666;">Page Not Found</div>
+                    <div class="error-description-line" style="color: #999999;">
+                        The page you are looking for<br>might have been removed or is temporarily unavailable.
+                    </div>
+                </div>
+                
+                <div class="error-palette">
+                    <div class="palette-swatch" style="background: #0066CC;" onclick="copyHex('#0066CC')">
+                        <span class="swatch-label">#0066CC</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #F8F8F8;" onclick="copyHex('#F8F8F8')">
+                        <span class="swatch-label">#F8F8F8</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #333333;" onclick="copyHex('#333333')">
+                        <span class="swatch-label">#333333</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #666666;" onclick="copyHex('#666666')">
+                        <span class="swatch-label">#666666</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FFFFFF;" onclick="copyHex('#FFFFFF')">
+                        <span class="swatch-label">#FFFFFF</span>
+                    </div>
+                </div>
+
+                <div class="error-content">
+                    <h2 class="error-name">404 Page Not Found</h2>
+                    <div class="error-metadata">
+                        <span class="metadata-tag">Web Standard (1992–Present)</span>
+                        <span class="metadata-tag">HTTP Error</span>
+                    </div>
+                    <p class="error-story">
+                        The 404 became the internet's most familiar error—so common it became a design opportunity. Early 404s were stark white pages with black text. As web design matured, 404 pages became branded experiences: playful illustrations, clever copy, easter eggs. The palette evolved from utilitarian (gray and black) to expressive (blues for "lost," oranges for "redirect"). Some of the most creative design work happens on 404 pages because designers know users will see them.
+                    </p>
+                    <div class="cultural-note">
+                        <div class="cultural-note-title">Cultural Impact</div>
+                        <p class="cultural-note-text">
+                            "404" entered everyday language as shorthand for "not found." Companies competed for the best 404 page design (GitHub's Star Wars parody, Airbnb's friendly illustrations). The 404 evolved from failure state to brand personality showcase—proof that even errors can be opportunities.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Gmail Red Error -->
+            <article class="error-card">
+                <div class="error-mockup" style="background: #FFFFFF; color: #333333;">
+                    <div class="error-icon" style="color: #D93025;">⚠️</div>
+                    <div class="error-title" style="color: #D93025; font-size: 1.4rem;">
+                        Message could not be sent
+                    </div>
+                    <div class="error-description-line" style="color: #666666; margin-top: 1rem; background: #FFEBEE; padding: 1rem; border-radius: 4px; border-left: 4px solid #D93025;">
+                        Check your internet connection and try again
+                    </div>
+                </div>
+                
+                <div class="error-palette">
+                    <div class="palette-swatch" style="background: #D93025;" onclick="copyHex('#D93025')">
+                        <span class="swatch-label">#D93025</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FFEBEE;" onclick="copyHex('#FFEBEE')">
+                        <span class="swatch-label">#FFEBEE</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FFFFFF;" onclick="copyHex('#FFFFFF')">
+                        <span class="swatch-label">#FFFFFF</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #666666;" onclick="copyHex('#666666')">
+                        <span class="swatch-label">#666666</span>
+                    </div>
+                </div>
+
+                <div class="error-content">
+                    <h2 class="error-name">Gmail Error Banner</h2>
+                    <div class="error-metadata">
+                        <span class="metadata-tag">Gmail (2004–Present)</span>
+                        <span class="metadata-tag">Application Error</span>
+                    </div>
+                    <p class="error-story">
+                        Google's Material Design error palette (#D93025 red on #FFEBEE pink) became the standard for modern error states. Not aggressive, not passive—just clear. The red is warm, not harsh. The pink background softens the blow. This palette influenced thousands of applications: errors should be noticeable but not panic-inducing. It's the design language of "something went wrong, but we'll help you fix it."
+                    </p>
+                    <div class="cultural-note">
+                        <div class="cultural-note-title">Cultural Impact</div>
+                        <p class="cultural-note-text">
+                            Material Design's error colors became a design system standard, adopted by countless apps and websites. The psychological approach: red for attention, pink for softness, clear language for resolution. This palette represents the evolution from "FATAL ERROR" to "Oops, let's try again."
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Windows XP Error Dialog -->
+            <article class="error-card">
+                <div class="error-mockup" style="background: #ECE9D8; color: #000000; border-top: 24px solid #0054E3;">
+                    <div style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; text-align: left;">
+                        <div class="error-icon" style="color: #CC0000; margin: 0; font-size: 3rem;">✖️</div>
+                        <div>
+                            <div class="error-title" style="font-size: 1.2rem; text-align: left; margin-bottom: 0.5rem; color: #000000;">
+                                Application Error
+                            </div>
+                            <div class="error-description-line" style="font-size: 0.85rem; text-align: left; line-height: 1.6;">
+                                The instruction at "0x7c911e58" referenced<br> memory at "0x00000000".<br>
+                                The memory could not be "read".
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="error-palette">
+                    <div class="palette-swatch" style="background: #0054E3;" onclick="copyHex('#0054E3')">
+                        <span class="swatch-label">#0054E3</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #ECE9D8;" onclick="copyHex('#ECE9D8')">
+                        <span class="swatch-label">#ECE9D8</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #CC0000;" onclick="copyHex('#CC0000')">
+                        <span class="swatch-label">#CC0000</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FFFFFF;" onclick="copyHex('#FFFFFF')">
+                        <span class="swatch-label">#FFFFFF</span>
+                    </div>
+                </div>
+
+                <div class="error-content">
+                    <h2 class="error-name">Windows XP Error Dialog</h2>
+                    <div class="error-metadata">
+                        <span class="metadata-tag">Windows XP (2001–2014)</span>
+                        <span class="metadata-tag">Application Crash</span>
+                    </div>
+                    <p class="error-story">
+                        The Luna theme's olive-beige (#ECE9D8) with Fisher-Price blue (#0054E3) title bars became the face of Windows XP—including its errors. That specific beige, paired with a red X icon, appeared countless times: memory errors, application crashes, DLL failures. The friendly, rounded aesthetic couldn't hide the frustration. These dialogs interrupted gaming sessions, crashed Word documents, and taught a generation to save constantly.
+                    </p>
+                    <div class="cultural-note">
+                        <div class="cultural-note-title">Cultural Impact</div>
+                        <p class="cultural-note-text">
+                            Windows XP's error dialogs became meme material, photoshopped onto billboards, movie scenes, and art installations. The beige-and-blue palette is instantly recognizable as "early 2000s computing"—a time when errors were frequent but technology still felt optimistic.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- TOAST -->
+    <div id="toast" class="toast"></div>
+
+    <script>
+        function copyHex(hex) {
+            navigator.clipboard.writeText(hex).then(() => {
+                showToast(`Copied ${hex}`);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.style.opacity = '1';
+            setTimeout(() => {
+                toast.style.opacity = '0';
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>

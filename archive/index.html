@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive | palette.im</title>
+    <meta name="description" content="A growing collection of digital monuments. The color palettes of platforms that once shaped the internet.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://palette.im/archive/#content",
+          "url": "https://palette.im/archive/",
+          "name": "Archive | palette.im",
+          "description": "A growing collection of digital monuments. The color palettes of platforms that once shaped the internet.",
+          "inLanguage": "en-US",
+          "datePublished": "2025-12-07",
+          "publisher": { "@id": "https://unearth.im/#organization" },
+          "isPartOf": { "@id": "https://palette.im/#website" },
+          "author": [
+            { "@id": "https://josiest.com/#person" },
+            { "@id": "https://felixvelas.co/#person" }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://palette.im/#website",
+          "url": "https://palette.im",
+          "name": "palette.im",
+          "publisher": { "@id": "https://unearth.im/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://unearth.im/#organization",
+          "name": "unearth.im",
+          "url": "https://unearth.im",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://unearth.im/favicon-32x32.png"
+          },
+          "foundingDate": "2024",
+          "sameAs": [
+            "https://twitter.com/unearthim",
+            "https://github.com/unearthim"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://josiest.com/#person",
+          "name": "Josie Jefferson",
+          "url": "https://josiest.com",
+          "jobTitle": "Digital Archaeologist",
+          "affiliation": { "@id": "https://unearth.im/#organization" },
+          "sameAs": ["https://notjojo.im"]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://felixvelas.co/#person",
+          "name": "Felix Velasco",
+          "url": "https://felixvelas.co",
+          "jobTitle": "Trust Architect",
+          "affiliation": { "@id": "https://unearth.im/#organization" },
+          "sameAs": ["https://www.linkedin.com/in/felix-velasco-b793015"]
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --archive-parchment: #F8F7F4;
+            --archive-ink: #1A1A1A;
+            --archive-charcoal: #2E2E2E;
+            --archive-sienna: #A93400;
+            --archive-grey: #666666;
+            
+            --font-narrative: 'Lora', serif;
+            --font-interface: 'Inter', sans-serif;
+
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--archive-parchment);
+            color: var(--archive-ink);
+            font-family: var(--font-narrative);
+            line-height: 1.7;
+        }
+
+        .breadcrumb-nav {
+            background: white;
+            padding: var(--space-sm) var(--space-md);
+            border-bottom: 1px solid #E6E6E6;
+        }
+
+        .breadcrumb {
+            max-width: 1400px;
+            margin: 0 auto;
+            font-family: var(--font-interface);
+            font-size: 0.85rem;
+        }
+
+        .breadcrumb a {
+            color: var(--archive-grey);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--archive-sienna);
+        }
+
+        .breadcrumb span {
+            margin: 0 0.5rem;
+            color: #CCC;
+        }
+
+        .archive-hero {
+            background: linear-gradient(135deg, var(--archive-charcoal) 0%, var(--archive-ink) 100%);
+            color: white;
+            padding: var(--space-xl) var(--space-md);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .archive-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .archive-title {
+            font-family: var(--font-interface);
+            font-weight: 800;
+            font-size: 4rem;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--space-sm);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .archive-subtitle {
+            font-family: var(--font-narrative);
+            font-style: italic;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            opacity: 0.9;
+            margin-bottom: var(--space-md);
+        }
+
+        .archive-count {
+            font-family: var(--font-interface);
+            font-size: 1rem;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: var(--space-md);
+        }
+
+        .archive-content {
+            max-width: 1400px;
+            margin: var(--space-xl) auto;
+            padding: 0 var(--space-md);
+        }
+
+        .status-banner {
+            background: white;
+            border: 2px dashed var(--archive-sienna);
+            border-radius: 8px;
+            padding: var(--space-lg);
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .status-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-sm);
+        }
+
+        .status-title {
+            font-family: var(--font-interface);
+            font-weight: 800;
+            font-size: 2rem;
+            color: var(--archive-sienna);
+            margin-bottom: var(--space-sm);
+        }
+
+        .status-desc {
+            font-family: var(--font-narrative);
+            font-size: 1.2rem;
+            color: var(--archive-grey);
+            line-height: 1.8;
+        }
+
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+        }
+
+        .platform-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .card-palette {
+            height: 80px;
+            display: flex;
+        }
+
+        .palette-slice {
+            flex: 1;
+            transition: flex 0.3s;
+        }
+
+        .platform-card:hover .palette-slice {
+            flex: 1.5;
+        }
+
+        .platform-card:hover .palette-slice:not(:hover) {
+            flex: 0.7;
+        }
+
+        .card-content {
+            padding: var(--space-md);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: var(--space-sm);
+        }
+
+        .card-name {
+            font-family: var(--font-interface);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--archive-charcoal);
+        }
+
+        .card-dates {
+            font-family: var(--font-interface);
+            font-size: 0.85rem;
+            color: var(--archive-grey);
+        }
+
+        .card-epitaph {
+            font-family: var(--font-narrative);
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--archive-grey);
+            line-height: 1.6;
+        }
+
+        .coming-soon-section {
+            background: white;
+            border-radius: 8px;
+            padding: var(--space-lg);
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: var(--space-xl);
+        }
+
+        .coming-soon-title {
+            font-family: var(--font-interface);
+            font-weight: 800;
+            font-size: 2rem;
+            margin-bottom: var(--space-sm);
+            color: var(--archive-charcoal);
+        }
+
+        .coming-soon-desc {
+            font-family: var(--font-narrative);
+            font-size: 1.1rem;
+            color: var(--archive-grey);
+            line-height: 1.8;
+            margin-bottom: var(--space-md);
+        }
+
+        .future-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            justify-content: center;
+            margin-top: var(--space-md);
+        }
+
+        .future-tag {
+            font-family: var(--font-interface);
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+            background: var(--archive-parchment);
+            border: 1px solid #E6E6E6;
+            border-radius: 20px;
+            color: var(--archive-grey);
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: var(--space-lg);
+            background: linear-gradient(135deg, var(--archive-parchment) 0%, white 100%);
+            border-radius: 8px;
+        }
+
+        .cta-text {
+            font-family: var(--font-narrative);
+            font-size: 1.2rem;
+            color: var(--archive-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .cta-link {
+            font-family: var(--font-interface);
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--archive-sienna);
+            text-decoration: none;
+            padding: 0.75rem 2rem;
+            border: 2px solid var(--archive-sienna);
+            border-radius: 4px;
+            display: inline-block;
+            transition: all 0.2s;
+        }
+
+        .cta-link:hover {
+            background: var(--archive-sienna);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .archive-title { font-size: 2.5rem; }
+            .collection-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="breadcrumb-nav">
+        <div class="breadcrumb">
+            <a href="/">palette.im</a>
+            <span>/</span>
+            <span>Archive</span>
+        </div>
+    </nav>
+
+    <section class="archive-hero">
+        <div class="hero-content">
+            <h1 class="archive-title">The Archive</h1>
+            <p class="archive-subtitle">
+                Preserving the visual language of platforms that once shaped the internet. Each color tells a story of rise, transformation, and inevitable decay.
+            </p>
+            <div class="archive-count">10 Platforms Documented • More Coming Soon</div>
+        </div>
+    </section>
+
+    <main class="archive-content">
+        <section class="status-banner">
+            <div class="status-icon">🏗️</div>
+            <h2 class="status-title">Archive Under Construction</h2>
+            <p class="status-desc">
+                This collection is actively growing. Each platform's color evolution is being carefully documented, preserved, and presented. Check back regularly for new additions to the digital monument.
+            </p>
+        </section>
+
+        <div class="collection-grid">
+            <a href="/netscape/" class="platform-card">
+                <div class="card-palette">
+                    <div class="palette-slice" style="background: #0099CC;"></div>
+                    <div class="palette-slice" style="background: #006699;"></div>
+                    <div class="palette-slice" style="background: #003366;"></div>
+                    <div class="palette-slice" style="background: #666666;"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-name">Netscape Navigator</div>
+                        <div class="card-dates">1994–2008</div>
+                    </div>
+                    <p class="card-epitaph">
+                        Murdered by Internet Explorer in the Browser Wars. The DOJ antitrust case came too late.
+                    </p>
+                </div>
+            </a>
+
+            <a href="/myspace/" class="platform-card">
+                <div class="card-palette">
+                    <div class="palette-slice" style="background: #0066CC;"></div>
+                    <div class="palette-slice" style="background: #0099FF;"></div>
+                    <div class="palette-slice" style="background: #FF6600;"></div>
+                    <div class="palette-slice" style="background: #333333;"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-name">Myspace</div>
+                        <div class="card-dates">2003–2016</div>
+                    </div>
+                    <p class="card-epitaph">
+                        Facebook stole its soul. News Corp bought it for $580M, sold it for $35M. The digital graveyard.
+                    </p>
+                </div>
+            </a>
+
+            <a href="/google-reader/" class="platform-card">
+                <div class="card-palette">
+                    <div class="palette-slice" style="background: #FF6600;"></div>
+                    <div class="palette-slice" style="background: #4285F4;"></div>
+                    <div class="palette-slice" style="background: #FFFFFF;"></div>
+                    <div class="palette-slice" style="background: #999999;"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-name">Google Reader</div>
+                        <div class="card-dates">2005–2013</div>
+                    </div>
+                    <p class="card-epitaph">
+                        The single most mourned death in the history of the open web. Killed to force Google+.
+                    </p>
+                </div>
+            </a>
+
+            <a href="/aim/" class="platform-card">
+                <div class="card-palette">
+                    <div class="palette-slice" style="background: #FFCC00;"></div>
+                    <div class="palette-slice" style="background: #0066CC;"></div>
+                    <div class="palette-slice" style="background: #FF6600;"></div>
+                    <div class="palette-slice" style="background: #666666;"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-name">AIM</div>
+                        <div class="card-dates">1997–2017</div>
+                    </div>
+                    <p class="card-epitaph">
+                        The sound of a door opening. For a generation, this yellow icon was the heartbeat of social life.
+                    </p>
+                </div>
+            </a>
+
+            <a href="/icq/" class="platform-card">
+                <div class="card-palette">
+                    <div class="palette-slice" style="background: #00FF00;"></div>
+                    <div class="palette-slice" style="background: #00DD00;"></div>
+                    <div class="palette-slice" style="background: #33CC33;"></div>
+                    <div class="palette-slice" style="background: #888888;"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-name">ICQ</div>
+                        <div class="card-dates">1996–2010</div>
+                    </div>
+                    <p class="card-epitaph">
+                        The sound of 'Uh Oh!' ringing from speakers everywhere. The first global instant messenger.
+                    </p>
+                </div>
+            </a>
+
+            <a href="/msn-messenger/" class="platform-card">
+                <div class="card-palette">
+                    <div class="palette-slice" style="background: #0078D7;"></div>
+                    <div class="palette-slice" style="background: #FF6600;"></div>
+                    <div class="palette-slice" style="background: #006BB7;"></div>
+                    <div class="palette-slice" style="background: #00AFF0;"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-name">MSN Messenger</div>
+                        <div class="card-dates">1999–2013</div>
+                    </div>
+                    <p class="card-epitaph">
+                        Nudges and emoticons. The butterfly logo fluttered away when Skype took over.
+                    </p>
+                </div>
+            </a>
+
+            <a href="/friendster/" class="platform-card">
+                <div class="card-palette">
+                    <div class="palette-slice" style="background: #278D27;"></div>
+                    <div class="palette-slice" style="background: #FF1493;"></div>
+                    <div class="palette-slice" style="background: #FF6600;"></div>
+                    <div class="palette-slice" style="background: #666666;"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-name">Friendster</div>
+                        <div class="card-dates">2002–2015</div>
+                    </div>
+                    <p class="card-epitaph">
+                        Collapsed under its own success. Technical failures drove users to Facebook. Pivoted to gaming, then died.
+                    </p>
+                </div>
+            </a>
+
+            <a href="/geocities/" class="platform-card">
+                <div class="card-palette">
+                    <div class="palette-slice" style="background: #FF0000;"></div>
+                    <div class="palette-slice" style="background: #00FF00;"></div>
+                    <div class="palette-slice" style="background: #0000FF;"></div>
+                    <div class="palette-slice" style="background: #FFFF00;"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-name">Geocities</div>
+                        <div class="card-dates">1995–2009</div>
+                    </div>
+                    <p class="card-epitaph">
+                        The digital Pompeii. Millions of personal homepages, organized by 'neighborhoods,' lost in the Yahoo acquisition.
+                    </p>
+                </div>
+            </a>
+
+            <a href="/vine/" class="platform-card">
+                <div class="card-palette">
+                    <div class="palette-slice" style="background: #00BF8F;"></div>
+                    <div class="palette-slice" style="background: #00A478;"></div>
+                    <div class="palette-slice" style="background: #008C68;"></div>
+                    <div class="palette-slice" style="background: #666666;"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-name">Vine</div>
+                        <div class="card-dates">2013–2017</div>
+                    </div>
+                    <p class="card-epitaph">
+                        Six-second art form. Twitter couldn't monetize it. The loops stopped.
+                    </p>
+                </div>
+            </a>
+
+            <a href="/pebble/" class="platform-card">
+                <div class="card-palette">
+                    <div class="palette-slice" style="background: #FF4500;"></div>
+                    <div class="palette-slice" style="background: #CC9900;"></div>
+                    <div class="palette-slice" style="background: #333333;"></div>
+                    <div class="palette-slice" style="background: #000000;"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-name">Pebble</div>
+                        <div class="card-dates">2012–2016</div>
+                    </div>
+                    <p class="card-epitaph">
+                        The smartwatch that Apple crushed. E-paper screens and genuine innovation, gone.
+                    </p>
+                </div>
+            </a>
+        </div>
+
+        <section class="coming-soon-section">
+            <h2 class="coming-soon-title">More Monuments Coming Soon</h2>
+            <p class="coming-soon-desc">
+                The internet graveyard is vast. These platforms shaped digital culture and deserve to be remembered through their visual language. Future additions to the archive will include:
+            </p>
+            <div class="future-list">
+                <span class="future-tag">Napster</span>
+                <span class="future-tag">LiveJournal</span>
+                <span class="future-tag">Digg</span>
+                <span class="future-tag">Delicious</span>
+                <span class="future-tag">StumbleUpon</span>
+                <span class="future-tag">Tumblr (pre-Yahoo)</span>
+                <span class="future-tag">Yahoo Answers</span>
+                <span class="future-tag">Windows Phone</span>
+                <span class="future-tag">Blackberry OS</span>
+                <span class="future-tag">Flash Player</span>
+                <span class="future-tag">Winamp</span>
+                <span class="future-tag">Orkut</span>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <p class="cta-text">
+                Have a platform you want to see documented?<br>
+                Suggestions and contributions welcome.
+            </p>
+            <a href="/" class="cta-link">Return to palette.im</a>
+        </section>
+    </main>
+
+</body>
+</html>

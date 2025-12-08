@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://palette.im/decades#content",
+          "url": "https://palette.im/decades",
+          "name": "Decades | palette.im",
+          "description": "Color trends that defined each era of digital culture—from 90s neon web to 2010s flat design minimalism.",
+          "inLanguage": "en-US",
+          "datePublished": "2025-12-07",
+          "publisher": { "@id": "https://palette.im/#organization" },
+          "isPartOf": { "@id": "https://palette.im/#website" },
+          "author": { "@id": "https://josiest.com/#person" }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://palette.im/#website",
+          "url": "https://palette.im",
+          "name": "palette.im",
+          "description": "The Internet Archive of Color",
+          "publisher": { "@id": "https://palette.im/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://palette.im/#organization",
+          "name": "palette.im",
+          "url": "https://palette.im",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://palette.im/favicon-32x32.png"
+          },
+          "foundingDate": "2024",
+          "sameAs": [
+            "https://twitter.com/palettemuseum",
+            "https://github.com/palette-museum"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://josiest.com/#person",
+          "name": "Josie Jefferson",
+          "url": "https://josiest.com",
+          "jobTitle": "Digital Archaeologist",
+          "affiliation": { "@id": "https://palette.im/#organization" },
+          "sameAs": ["https://notjojo.im"]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <title>Decades | palette.im</title>
+    <meta name="title" content="Decades | palette.im">
+    <meta name="description" content="Color trends that defined each era of digital culture—from 90s neon web to 2010s flat design minimalism.">
+    <meta name="keywords" content="color trends, design history, web design, 90s web, Y2K aesthetic, Web 2.0, flat design, decade palettes">
+    <meta name="author" content="palette.im">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    
+    <link rel="canonical" href="https://palette.im/decades" />
+    
+    <!-- Webmention Endpoint -->
+    <link rel="webmention" href="https://webmention.io/unearth.im/webmention" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://palette.im/decades">
+    <meta property="og:title" content="Decades | palette.im">
+    <meta property="og:description" content="Color trends that defined each era of digital culture—from 90s neon web to 2010s flat design minimalism.">
+    <meta property="og:image" content="https://palette.im/og-image.png">
+    <meta property="og:site_name" content="palette.im">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://palette.im/decades">
+    <meta property="twitter:title" content="Decades | palette.im">
+    <meta property="twitter:description" content="Color trends that defined each era of digital culture—from 90s neon web to 2010s flat design minimalism.">
+    <meta property="twitter:image" content="https://palette.im/og-image.png">
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Brand Color Meta Tags -->
+    <meta name="theme-color" content="#F8F7F4">
+    <meta name="msapplication-TileColor" content="#A93400">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --archive-parchment: #F8F7F4;
+            --archive-ink: #1A1A1A;
+            --archive-charcoal: #2E2E2E;
+            --archive-sienna: #A93400;
+            --archive-grey: #666666;
+            
+            --font-narrative: 'Lora', serif;
+            --font-interface: 'Inter', sans-serif;
+
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--archive-parchment);
+            color: var(--archive-ink);
+            font-family: var(--font-narrative);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* BREADCRUMB NAV */
+        .breadcrumb-nav {
+            background: white;
+            padding: var(--space-sm) var(--space-md);
+            border-bottom: 1px solid #E6E6E6;
+        }
+
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: var(--font-interface);
+            font-size: 0.85rem;
+        }
+
+        .breadcrumb a {
+            color: var(--archive-grey);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--archive-sienna);
+        }
+
+        .breadcrumb span {
+            margin: 0 0.5rem;
+            color: #CCC;
+        }
+
+        /* HEADER */
+        .page-header {
+            background: linear-gradient(135deg, var(--archive-charcoal) 0%, #000000 100%);
+            color: var(--archive-parchment);
+            padding: var(--space-xl) var(--space-md);
+            text-align: center;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .page-title {
+            font-family: var(--font-interface);
+            font-weight: 800;
+            font-size: 4rem;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--space-md);
+        }
+
+        .page-subtitle {
+            font-family: var(--font-narrative);
+            font-style: italic;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-md);
+        }
+
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto var(--space-xl);
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: var(--archive-grey);
+        }
+
+        /* DECADE CARDS */
+        .decades-grid {
+            display: grid;
+            gap: var(--space-xl);
+        }
+
+        .decade-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .decade-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+
+        .decade-header {
+            padding: var(--space-lg);
+            text-align: center;
+        }
+
+        .decade-year {
+            font-family: var(--font-interface);
+            font-weight: 800;
+            font-size: 3.5rem;
+            margin-bottom: var(--space-sm);
+            background: linear-gradient(135deg, var(--archive-sienna), var(--archive-charcoal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .decade-name {
+            font-family: var(--font-narrative);
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--archive-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .decade-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--archive-charcoal);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .decade-palette {
+            display: flex;
+            height: 120px;
+            margin: var(--space-md) 0;
+        }
+
+        .palette-swatch {
+            flex: 1;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: var(--space-sm);
+        }
+
+        .palette-swatch:hover {
+            flex: 1.5;
+        }
+
+        .swatch-label {
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: var(--font-interface);
+            font-size: 0.7rem;
+            opacity: 0;
+            transition: opacity 0.2s;
+            font-weight: 600;
+        }
+
+        .palette-swatch:hover .swatch-label {
+            opacity: 1;
+        }
+
+        .decade-content {
+            padding: 0 var(--space-lg) var(--space-lg);
+        }
+
+        .cultural-context {
+            background: var(--archive-parchment);
+            padding: var(--space-md);
+            border-radius: 8px;
+            margin-bottom: var(--space-md);
+        }
+
+        .context-title {
+            font-family: var(--font-interface);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--archive-sienna);
+            margin-bottom: var(--space-sm);
+        }
+
+        .context-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--archive-charcoal);
+        }
+
+        .platforms-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-xs);
+            margin-top: var(--space-md);
+        }
+
+        .platform-tag {
+            font-family: var(--font-interface);
+            font-size: 0.85rem;
+            padding: 6px 12px;
+            background: white;
+            border: 1px solid #E6E6E6;
+            border-radius: 20px;
+            color: var(--archive-grey);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .platform-tag:hover {
+            background: var(--archive-charcoal);
+            color: white;
+            border-color: var(--archive-charcoal);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--archive-charcoal);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-family: var(--font-interface);
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        @media (max-width: 768px) {
+            .page-title { font-size: 2.5rem; }
+            .decade-year { font-size: 2.5rem; }
+            .decade-palette { height: 80px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb-nav">
+        <div class="breadcrumb">
+            <a href="/">palette.im</a>
+            <span>/</span>
+            <span>Decades</span>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <div class="header-content">
+            <h1 class="page-title">Decades</h1>
+            <p class="page-subtitle">
+                Every era had its palette. From neon rebellion to flat minimalism, these are the colors that defined digital culture.
+            </p>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <p class="intro-text">
+            Color trends don't emerge in a vacuum—they're responses to technology, cultural moments, and collective mood. A decade's palette tells you what was possible, what was fashionable, and what people were feeling. This is the visual language of the internet, decade by decade.
+        </p>
+
+        <div class="decades-grid">
+
+            <!-- 1990s -->
+            <article class="decade-card">
+                <div class="decade-header">
+                    <h2 class="decade-year">1990s</h2>
+                    <div class="decade-name">"Under Construction"</div>
+                    <p class="decade-description">
+                        Neon rebellion against beige corporate design. Background textures everywhere. Animated GIFs. The web was a playground, and color was free. If Netscape could render it, someone would use it—proudly.
+                    </p>
+                </div>
+                
+                <div class="decade-palette">
+                    <div class="palette-swatch" style="background: #FF00FF;" onclick="copyHex('#FF00FF')">
+                        <span class="swatch-label">#FF00FF</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #00FFFF;" onclick="copyHex('#00FFFF')">
+                        <span class="swatch-label">#00FFFF</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FFFF00;" onclick="copyHex('#FFFF00')">
+                        <span class="swatch-label">#FFFF00</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #00FF00;" onclick="copyHex('#00FF00')">
+                        <span class="swatch-label">#00FF00</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FF0000;" onclick="copyHex('#FF0000')">
+                        <span class="swatch-label">#FF0000</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #0000FF;" onclick="copyHex('#0000FF')">
+                        <span class="swatch-label">#0000FF</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #C0C0C0;" onclick="copyHex('#C0C0C0')">
+                        <span class="swatch-label">#C0C0C0</span>
+                    </div>
+                </div>
+
+                <div class="decade-content">
+                    <div class="cultural-context">
+                        <div class="context-title">Cultural Context</div>
+                        <p class="context-text">
+                            The 216-color "web-safe" palette dominated. Limited by monitors that could only display 256 colors, designers embraced bold primaries and eye-searing combinations. Tiled background images (often marble or stars) were a status symbol. The aesthetic was "more is more"—dancing babies, spinning logos, hit counters. This was the internet's adolescence: chaotic, experimental, unapologetically loud.
+                        </p>
+                    </div>
+
+                    <div class="platforms-list">
+                        <a href="/geocities/" class="platform-tag">GeoCities</a>
+                        <a href="/netscape/" class="platform-tag">Netscape</a>
+                        <a href="/icq/" class="platform-tag">ICQ</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2000s (Early) -->
+            <article class="decade-card">
+                <div class="decade-header">
+                    <h2 class="decade-year">2000-2005</h2>
+                    <div class="decade-name">"Web 2.0 Gloss"</div>
+                    <p class="decade-description">
+                        Glossy buttons. Reflective surfaces. Gradients that screamed "professional." Blue was king. This was the era of "design maturity"—the web growing up, getting venture capital, and putting on a suit.
+                    </p>
+                </div>
+                
+                <div class="decade-palette">
+                    <div class="palette-swatch" style="background: #0066CC;" onclick="copyHex('#0066CC')">
+                        <span class="swatch-label">#0066CC</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FF6600;" onclick="copyHex('#FF6600')">
+                        <span class="swatch-label">#FF6600</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #66CC00;" onclick="copyHex('#66CC00')">
+                        <span class="swatch-label">#66CC00</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #E6E6E6;" onclick="copyHex('#E6E6E6')">
+                        <span class="swatch-label">#E6E6E6</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FFFFFF;" onclick="copyHex('#FFFFFF')">
+                        <span class="swatch-label">#FFFFFF</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #333333;" onclick="copyHex('#333333')">
+                        <span class="swatch-label">#333333</span>
+                    </div>
+                </div>
+
+                <div class="decade-content">
+                    <div class="cultural-context">
+                        <div class="context-title">Cultural Context</div>
+                        <p class="context-text">
+                            Ajax changed everything. Sites became "applications." Trust was blue (Facebook, Twitter, PayPal, Skype). Orange meant "action" (RSS feeds, Blogger, Firefox). Rounded corners, drop shadows, and glossy effects were everywhere—the skeuomorphic aesthetic that mimicked real-world materials. This was peak optimism: the web was going to democratize everything.
+                        </p>
+                    </div>
+
+                    <div class="platforms-list">
+                        <a href="/friendster/" class="platform-tag">Friendster</a>
+                        <a href="/myspace/" class="platform-tag">Myspace</a>
+                        <a href="/google-reader/" class="platform-tag">Google Reader</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2010s -->
+            <article class="decade-card">
+                <div class="decade-header">
+                    <h2 class="decade-year">2010s</h2>
+                    <div class="decade-name">"Flat Design Minimalism"</div>
+                    <p class="decade-description">
+                        Death to gradients. iOS 7 killed skeuomorphism and ushered in an era of flat, vibrant simplicity. Pastel backgrounds. Sans-serif everything. The palette became a brand identity statement.
+                    </p>
+                </div>
+                
+                <div class="decade-palette">
+                    <div class="palette-swatch" style="background: #1DA1F2;" onclick="copyHex('#1DA1F2')">
+                        <span class="swatch-label">#1DA1F2</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #E1306C;" onclick="copyHex('#E1306C')">
+                        <span class="swatch-label">#E1306C</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #00D9C6;" onclick="copyHex('#00D9C6')">
+                        <span class="swatch-label">#00D9C6</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #7B68EE;" onclick="copyHex('#7B68EE')">
+                        <span class="swatch-label">#7B68EE</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FF5A5F;" onclick="copyHex('#FF5A5F')">
+                        <span class="swatch-label">#FF5A5F</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #F8F8F8;" onclick="copyHex('#F8F8F8')">
+                        <span class="swatch-label">#F8F8F8</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #1A1A1A;" onclick="copyHex('#1A1A1A')">
+                        <span class="swatch-label">#1A1A1A</span>
+                    </div>
+                </div>
+
+                <div class="decade-content">
+                    <div class="cultural-context">
+                        <div class="context-title">Cultural Context</div>
+                        <p class="context-text">
+                            Mobile-first design demanded simplicity. Retina displays made subtlety possible. Every startup had a single-color brand (Airbnb coral, Slack aubergine, Spotify green). Gradients returned, but softer—pastel washes instead of glossy shine. Dark mode emerged. Accessibility mattered. The palette became restrained, intentional, corporate. Beauty with guardrails.
+                        </p>
+                    </div>
+
+                    <div class="platforms-list">
+                        <a href="/vine/" class="platform-tag">Vine</a>
+                        <a href="/pebble/" class="platform-tag">Pebble</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2020s -->
+            <article class="decade-card">
+                <div class="decade-header">
+                    <h2 class="decade-year">2020s</h2>
+                    <div class="decade-name">"Brutalist Nostalgia"</div>
+                    <p class="decade-description">
+                        Y2K revival meets dark mode maximalism. Neon accents on black. Glitch aesthetics. Hyper-saturated gradients. The web is remembering what it forgot—that color can be fun, weird, rebellious again.
+                    </p>
+                </div>
+                
+                <div class="decade-palette">
+                    <div class="palette-swatch" style="background: #000000;" onclick="copyHex('#000000')">
+                        <span class="swatch-label">#000000</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #00FF41;" onclick="copyHex('#00FF41')">
+                        <span class="swatch-label">#00FF41</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FF00FF;" onclick="copyHex('#FF00FF')">
+                        <span class="swatch-label">#FF00FF</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #00D4FF;" onclick="copyHex('#00D4FF')">
+                        <span class="swatch-label">#00D4FF</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FFD700;" onclick="copyHex('#FFD700')">
+                        <span class="swatch-label">#FFD700</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FF3366;" onclick="copyHex('#FF3366')">
+                        <span class="swatch-label">#FF3366</span>
+                    </div>
+                    <div class="palette-swatch" style="background: #FFFFFF;" onclick="copyHex('#FFFFFF')">
+                        <span class="swatch-label">#FFFFFF</span>
+                    </div>
+                </div>
+
+                <div class="decade-content">
+                    <div class="cultural-context">
+                        <div class="context-title">Cultural Context</div>
+                        <p class="context-text">
+                            Gen Z discovered GeoCities through Internet Archive and said "this rules, actually." Designers rejected minimalism for maximalist energy. Neon on black became the aesthetic of crypto, gaming, and rebellion. Glitch effects, distorted text, intentionally "broken" design. The palette is high-contrast, highly saturated, and unapologetically chaotic. We've come full circle—90s energy with modern tools.
+                        </p>
+                    </div>
+
+                    <div class="platforms-list">
+                        <span class="platform-tag" style="cursor: default; opacity: 0.5;">Discord</span>
+                        <span class="platform-tag" style="cursor: default; opacity: 0.5;">Notion</span>
+                        <span class="platform-tag" style="cursor: default; opacity: 0.5;">Figma</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- TOAST -->
+    <div id="toast" class="toast"></div>
+
+    <script>
+        function copyHex(hex) {
+            navigator.clipboard.writeText(hex).then(() => {
+                showToast(`Copied ${hex}`);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.style.opacity = '1';
+            setTimeout(() => {
+                toast.style.opacity = '0';
+            }, 2000);
+        }
+    </script>
+
+</body>
+</html>

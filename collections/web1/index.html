@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web 1.0 Collection | palette.im</title>
+    <meta name="description" content="The pioneers of the early internet. Netscape, Geocities, and the platforms that defined cyberspace.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://palette.im/collections/web1/#content",
+          "url": "https://palette.im/collections/web1/",
+          "name": "Web 1.0 Collection | palette.im",
+          "description": "The pioneers of the early internet. Netscape, Geocities, and the platforms that defined cyberspace.",
+          "inLanguage": "en-US",
+          "datePublished": "2025-12-07",
+          "publisher": { "@id": "https://unearth.im/#organization" },
+          "isPartOf": { "@id": "https://palette.im/#website" },
+          "author": [
+            { "@id": "https://josiest.com/#person" },
+            { "@id": "https://felixvelas.co/#person" }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://palette.im/#website",
+          "url": "https://palette.im",
+          "name": "palette.im",
+          "publisher": { "@id": "https://unearth.im/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://unearth.im/#organization",
+          "name": "unearth.im",
+          "url": "https://unearth.im",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://unearth.im/favicon-32x32.png"
+          },
+          "foundingDate": "2024",
+          "sameAs": [
+            "https://twitter.com/unearthim",
+            "https://github.com/unearthim"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://josiest.com/#person",
+          "name": "Josie Jefferson",
+          "url": "https://josiest.com",
+          "jobTitle": "Digital Archaeologist",
+          "affiliation": { "@id": "https://unearth.im/#organization" },
+          "sameAs": ["https://notjojo.im"]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://felixvelas.co/#person",
+          "name": "Felix Velasco",
+          "url": "https://felixvelas.co",
+          "jobTitle": "Trust Architect",
+          "affiliation": { "@id": "https://unearth.im/#organization" },
+          "sameAs": ["https://www.linkedin.com/in/felix-velasco-b793015"]
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --archive-parchment: #F8F7F4;
+            --archive-ink: #1A1A1A;
+            --archive-charcoal: #2E2E2E;
+            --archive-sienna: #A93400;
+            --archive-grey: #666666;
+            --collection-primary: #0099CC;
+            
+            --font-narrative: 'Lora', serif;
+            --font-interface: 'Inter', sans-serif;
+
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 6rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--archive-parchment);
+            color: var(--archive-ink);
+            font-family: var(--font-narrative);
+            line-height: 1.7;
+        }
+
+        .breadcrumb-nav {
+            background: white;
+            padding: var(--space-sm) var(--space-md);
+            border-bottom: 1px solid #E6E6E6;
+        }
+
+        .breadcrumb {
+            max-width: 1400px;
+            margin: 0 auto;
+            font-family: var(--font-interface);
+            font-size: 0.85rem;
+        }
+
+        .breadcrumb a {
+            color: var(--archive-grey);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--archive-sienna);
+        }
+
+        .breadcrumb span {
+            margin: 0 0.5rem;
+            color: #CCC;
+        }
+
+        .collection-hero {
+            background: linear-gradient(135deg, var(--collection-primary) 0%, #006699 100%);
+            color: white;
+            padding: var(--space-xl) var(--space-md);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .collection-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .collection-icon {
+            font-size: 5rem;
+            margin-bottom: var(--space-sm);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .collection-title {
+            font-family: var(--font-interface);
+            font-weight: 800;
+            font-size: 4rem;
+            letter-spacing: -0.02em;
+            margin-bottom: var(--space-sm);
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .collection-subtitle {
+            font-family: var(--font-narrative);
+            font-style: italic;
+            font-size: 1.4rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .collection-content {
+            max-width: 1200px;
+            margin: var(--space-xl) auto;
+            padding: 0 var(--space-md);
+        }
+
+        .collection-intro {
+            background: white;
+            padding: var(--space-lg);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: var(--space-xl);
+            text-align: center;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: var(--archive-grey);
+            margin-bottom: var(--space-md);
+        }
+
+        .status-banner {
+            background: #FFF3CD;
+            border: 2px dashed #856404;
+            color: #856404;
+            padding: var(--space-md);
+            border-radius: 8px;
+            font-family: var(--font-interface);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+        }
+
+        .platform-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .card-palette {
+            height: 80px;
+            display: flex;
+        }
+
+        .palette-slice {
+            flex: 1;
+            transition: flex 0.3s;
+        }
+
+        .platform-card:hover .palette-slice {
+            flex: 1.5;
+        }
+
+        .platform-card:hover .palette-slice:not(:hover) {
+            flex: 0.7;
+        }
+
+        .card-content {
+            padding: var(--space-md);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: var(--space-sm);
+        }
+
+        .card-name {
+            font-family: var(--font-interface);
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--archive-charcoal);
+        }
+
+        .card-dates {
+            font-family: var(--font-interface);
+            font-size: 0.85rem;
+            color: var(--archive-grey);
+        }
+
+        .card-epitaph {
+            font-family: var(--font-narrative);
+            font-style: italic;
+            font-size: 0.95rem;
+            color: var(--archive-grey);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .collection-title { font-size: 2.5rem; }
+            .platform-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="breadcrumb-nav">
+        <div class="breadcrumb">
+            <a href="/">palette.im</a>
+            <span>/</span>
+            <a href="/collections/">Collections</a>
+            <span>/</span>
+            <span>Web 1.0</span>
+        </div>
+    </nav>
+
+    <section class="collection-hero">
+        <div class="hero-content">
+            <div class="collection-icon">🌐</div>
+            <h1 class="collection-title">Web 1.0 Collection</h1>
+            <p class="collection-subtitle">
+                The pioneers. Teal gradients, under construction GIFs, and the birth of cyberspace.
+            </p>
+        </div>
+    </section>
+
+    <main class="collection-content">
+        <section class="collection-intro">
+            <p class="intro-text">
+                Before social media, before Web 2.0, before the algorithm—there was the early internet. Static pages. Dial-up modems. The promise that cyberspace would be different, democratic, free. These platforms built that dream. Then the dream died.
+            </p>
+            <div class="status-banner">
+                🏗️ Collection curation in progress — Full exhibition coming soon
+            </div>
+        </section>
+
+        <div class="platform-grid">
+            <a href="/netscape/" class="platform-card">
+                <div class="card-palette">
+                    <div class="palette-slice" style="background: #0099CC;"></div>
+                    <div class="palette-slice" style="background: #006699;"></div>
+                    <div class="palette-slice" style="background: #003366;"></div>
+                    <div class="palette-slice" style="background: #666666;"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-name">Netscape Navigator</div>
+                        <div class="card-dates">1994–2008</div>
+                    </div>
+                    <p class="card-epitaph">
+                        Murdered by Internet Explorer in the Browser Wars. The DOJ antitrust case came too late.
+                    </p>
+                </div>
+            </a>
+
+            <a href="/geocities/" class="platform-card">
+                <div class="card-palette">
+                    <div class="palette-slice" style="background: #FF0000;"></div>
+                    <div class="palette-slice" style="background: #00FF00;"></div>
+                    <div class="palette-slice" style="background: #0000FF;"></div>
+                    <div class="palette-slice" style="background: #FFFF00;"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-name">Geocities</div>
+                        <div class="card-dates">1995–2009</div>
+                    </div>
+                    <p class="card-epitaph">
+                        The digital Pompeii. Millions of personal homepages, organized by 'neighborhoods,' lost in the Yahoo acquisition.
+                    </p>
+                </div>
+            </a>
+
+            <a href="/google-reader/" class="platform-card">
+                <div class="card-palette">
+                    <div class="palette-slice" style="background: #FF6600;"></div>
+                    <div class="palette-slice" style="background: #4285F4;"></div>
+                    <div class="palette-slice" style="background: #FFFFFF;"></div>
+                    <div class="palette-slice" style="background: #999999;"></div>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-name">Google Reader</div>
+                        <div class="card-dates">2005–2013</div>
+                    </div>
+                    <p class="card-epitaph">
+                        The single most mourned death in the history of the open web. Killed to force Google+.
+                    </p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>
