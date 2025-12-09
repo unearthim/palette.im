@@ -28,16 +28,64 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "palette.im | The Internet Archive of Color",
-      "description": "Preserving the visual language of digital culture. A monument to the platforms, movements, and aesthetics that shaped the internet—one hex code at a time.",
-      "url": "https://palette.im",
-      "publisher": {
-        "@type": "Organization",
-        "name": "unearth.im",
-        "url": "https://unearth.im"
-      },
-      "mainEntity": {
+      "@graph": [
+        {
+          "@type": ["Collection", "WebPage"],
+          "@id": "https://palette.im/#collection",
+          "name": "palette.im | The Internet Archive of Color",
+          "description": "Preserving the visual language of digital culture. A monument to the platforms, movements, and aesthetics that shaped the internet—one hex code at a time.",
+          "url": "https://palette.im/",
+          "datePublished": "2024-12-01",
+          "collectionType": "Digital Archive",
+          "author": [
+            { "@id": "https://josiest.com/#person" },
+            { "@id": "https://felixvelas.co/#person" }
+          ],
+          "publisher": { "@id": "https://unearth.im/#organization" }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://palette.im/#website",
+          "url": "https://palette.im/",
+          "name": "palette.im",
+          "publisher": { "@id": "https://unearth.im/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://unearth.im/#organization",
+          "name": "unearth.im",
+          "url": "https://unearth.im/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://unearth.im/assets/unearth-logo.png"
+          },
+          "sameAs": [
+            "https://twitter.com/unearthim",
+            "https://github.com/unearthim"
+          ],
+          "foundingDate": "2024"
+        },
+        {
+          "@type": "Person",
+          "@id": "https://josiest.com/#person",
+          "name": "Josie Jefferson",
+          "jobTitle": "Digital Archaeologist & Trust Architect",
+          "url": "https://josiest.com/",
+          "sameAs": ["https://notjojo.im"],
+          "affiliation": { "@id": "https://unearth.im/#organization" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://felixvelas.co/#person",
+          "name": "Felix Velasco",
+          "jobTitle": "Trust Architect & Digital Archaeologist",
+          "url": "https://felixvelas.co/",
+          "sameAs": ["https://www.linkedin.com/in/felix-velasco-b793015"],
+          "affiliation": { "@id": "https://unearth.im/#organization" }
+        },
+        {
+          "@type": "Thing",
+          "@id": "https://palette.im/#mainEntity",
         "@type": "ItemList",
         "itemListElement": [
           {
@@ -728,7 +776,10 @@
                 <a href="./about/" class="footer-link">Mission & Vision</a>
                 <a href="./methodology/" class="footer-link">Curation Methodology</a>
                 <a href="./api/" class="footer-link">API Documentation</a>
-                <a href="https://unearth.im" class="footer-link">Built by unearth.im</a>
+                <small>
+                    a <b><a href="https://sentientification.com" target="_blank" rel="noopener noreferrer" class="footer-link">liminal mind meld</a></b> collaboration:<br>
+                    digital monument by <b><a href="https://unearth.im" target="_blank" rel="noopener noreferrer" class="footer-link">unearth.im</a></b> | <b><a href="https://archaeobytology.org" target="_blank" rel="noopener noreferrer" class="footer-link">archive & anvil</a></b>
+                </small>
             </div>
         </div>
     </footer>
