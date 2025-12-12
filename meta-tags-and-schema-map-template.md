@@ -45,7 +45,8 @@
     {
       "@type": "Organization",
       "@id": "https://unearth.im/#organization",
-      "name": "unearth.im",
+      "name": "Unearth Heritage Foundry",
+"alternateName": ["Unearth Foundry","Archive & Anvil","Unearth Anvil","Unearth Works","Cultural Infrastructure Foundry"],
       "url": "https://unearth.im",
       "logo": {
         "@type": "ImageObject",
@@ -88,7 +89,7 @@
     <meta name="title" content="[Page Title] | [Site Name]">
     <meta name="description" content="[A concise, specific page description (approx. 155 characters). Should be compelling and keyword-rich.]">
     <meta name="keywords" content="[Comma-separated list of 5-10 relevant keywords]">
-    <meta name="author" content="[domain].[tld] (An unearth.im Project)">
+    <meta name="author" content="[domain].[tld] (by unearth heritage foundry - archive & anvil - unearth.im)">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">

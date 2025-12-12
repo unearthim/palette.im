@@ -212,15 +212,13 @@
     <style>
         /* --- DESIGN SYSTEM --- */
         :root {
-            /* Archive Palette - Dark Theme */
-            --archive-deep-black: #0A0A0A;
-            --archive-charcoal: #1A1A1A;
-            --archive-slate: #2A2A2A;
-            --archive-gold: #FFB000;
-            --archive-gold-dim: #CC8F00;
-            --archive-text: #E8E8E8;
-            --archive-text-dim: #A0A0A0;
-            --archive-border: #333333;
+            /* Archive Palette */
+            --archive-parchment: #F8F7F4;
+            --archive-ink: #1A1A1A;
+            --archive-charcoal: #2E2E2E;
+            --archive-sienna: #A93400;
+            --archive-grey: #666666;
+            --archive-light-grey: #E6E6E6;
 
             /* Typography */
             --font-narrative: 'Lora', serif;
@@ -241,8 +239,8 @@
         }
 
         body {
-            background-color: var(--archive-deep-black);
-            color: var(--archive-text);
+            background-color: var(--archive-parchment);
+            color: var(--archive-ink);
             font-family: var(--font-narrative);
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
@@ -251,10 +249,10 @@
         /* --- HEADER --- */
         .archive-header {
             background: var(--archive-charcoal);
-            color: var(--archive-text);
+            color: var(--archive-parchment);
             padding: var(--space-lg) var(--space-md);
             text-align: center;
-            border-bottom: 4px solid var(--archive-gold);
+            border-bottom: 4px solid var(--archive-sienna);
         }
 
         .logo {
@@ -263,7 +261,7 @@
             font-size: 3rem;
             letter-spacing: -0.02em;
             margin-bottom: var(--space-sm);
-            background: linear-gradient(135deg, #FFB000 0%, #FFFFFF 100%);
+            background: linear-gradient(135deg, #F8F7F4 0%, #C0C0C0 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -273,7 +271,7 @@
             font-family: var(--font-narrative);
             font-style: italic;
             font-size: 1.3rem;
-            color: var(--archive-gold);
+            color: var(--archive-sienna);
             margin-bottom: var(--space-md);
         }
 
@@ -287,13 +285,13 @@
 
         /* --- NAVIGATION --- */
         .nav-bar {
-            background: var(--archive-slate);
+            background: white;
             padding: var(--space-md) var(--space-sm);
-            border-bottom: 1px solid var(--archive-border);
+            border-bottom: 1px solid var(--archive-light-grey);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
         .nav-container {
@@ -311,7 +309,7 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            color: var(--archive-text-dim);
+            color: var(--archive-charcoal);
             text-decoration: none;
             padding: var(--space-xs) var(--space-sm);
             border-bottom: 2px solid transparent;
@@ -319,8 +317,8 @@
         }
 
         .nav-link:hover {
-            color: var(--archive-gold);
-            border-bottom-color: var(--archive-gold);
+            color: var(--archive-sienna);
+            border-bottom-color: var(--archive-sienna);
         }
 
         /* --- FEATURED EXHIBITS --- */
@@ -341,14 +339,14 @@
             font-size: 2.5rem;
             letter-spacing: -0.02em;
             margin-bottom: var(--space-sm);
-            color: var(--archive-text);
+            color: var(--archive-charcoal);
         }
 
         .section-subtitle {
             font-family: var(--font-narrative);
             font-style: italic;
             font-size: 1.2rem;
-            color: var(--archive-text-dim);
+            color: var(--archive-grey);
         }
 
         /* --- EXHIBIT GRID --- */
@@ -360,22 +358,20 @@
         }
 
         .exhibit-card {
-            background: var(--archive-slate);
+            background: white;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             text-decoration: none;
             color: inherit;
             display: flex;
             flex-direction: column;
-            border: 1px solid var(--archive-border);
         }
 
         .exhibit-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 32px rgba(255, 176, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.5);
-            border-color: var(--archive-gold);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
         }
 
         .exhibit-header {
@@ -425,12 +421,12 @@
         .exhibit-epitaph {
             font-family: var(--font-narrative);
             font-style: italic;
-            color: var(--archive-gold);
+            color: var(--archive-sienna);
             font-size: 0.95rem;
             line-height: 1.6;
             margin-bottom: var(--space-sm);
             padding-left: var(--space-sm);
-            border-left: 3px solid var(--archive-gold);
+            border-left: 3px solid var(--archive-sienna);
         }
 
         .exhibit-palette {
@@ -460,10 +456,9 @@
             max-width: 800px;
             margin: var(--space-xl) auto;
             padding: var(--space-lg);
-            background: var(--archive-slate);
+            background: white;
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--archive-border);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
         .note-title {
@@ -471,14 +466,14 @@
             font-weight: 700;
             font-size: 1.3rem;
             margin-bottom: var(--space-md);
-            color: var(--archive-gold);
+            color: var(--archive-charcoal);
             text-align: center;
         }
 
         .note-body {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: var(--archive-text-dim);
+            color: var(--archive-grey);
         }
 
         .note-body p {
@@ -489,16 +484,16 @@
             font-style: italic;
             text-align: right;
             margin-top: var(--space-md);
-            color: var(--archive-gold);
+            color: var(--archive-sienna);
         }
 
         /* --- FOOTER --- */
         .archive-footer {
             background: var(--archive-charcoal);
-            color: var(--archive-text);
+            color: var(--archive-parchment);
             padding: var(--space-lg) var(--space-md);
             margin-top: var(--space-xl);
-            border-top: 4px solid var(--archive-gold);
+            border-top: 4px solid var(--archive-sienna);
         }
 
         .footer-content {
@@ -520,14 +515,14 @@
 
         .footer-link {
             display: block;
-            color: var(--archive-text-dim);
+            color: var(--archive-parchment);
             text-decoration: none;
             margin-bottom: var(--space-xs);
             transition: color 0.2s;
         }
 
         .footer-link:hover {
-            color: var(--archive-gold);
+            color: var(--archive-sienna);
         }
 
         @media (max-width: 768px) {

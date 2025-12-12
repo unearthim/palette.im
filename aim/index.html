@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIM (1997-2017) | palette.im</title>
-    <meta name="description" content="The sound of a door opening. For a generation, this yellow icon was the heartbeat of social life. Away messages, buddy lists, and the color of being online.">
-    
+    <meta name="description"
+        content="The sound of a door opening. For a generation, this yellow icon was the heartbeat of social life. Away messages, buddy lists, and the color of being online.">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,7 +38,8 @@
         {
           "@type": "Organization",
           "@id": "https://unearth.im/#organization",
-          "name": "unearth.im",
+          "name": "Unearth Heritage Foundry",
+"alternateName": ["Unearth Foundry","Archive & Anvil","Unearth Anvil","Unearth Works","Cultural Infrastructure Foundry"],
           "url": "https://unearth.im",
           "logo": {
             "@type": "ImageObject",
@@ -69,10 +72,12 @@
       ]
     }
     </script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
@@ -81,9 +86,9 @@
             --archive-charcoal: #2E2E2E;
             --archive-sienna: #A93400;
             --archive-grey: #666666;
-            
+
             --platform-primary: #FFD900;
-            
+
             --font-narrative: 'Lora', serif;
             --font-interface: 'Inter', sans-serif;
 
@@ -152,7 +157,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.3) 0%, transparent 60%);
+            background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.3) 0%, transparent 60%);
             pointer-events: none;
         }
 
@@ -169,7 +174,7 @@
             border-radius: 50%;
             background: var(--platform-primary);
             border: 4px solid #1A1A1A;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
             margin: 0 auto var(--space-md);
         }
 
@@ -197,7 +202,7 @@
             max-width: 700px;
             margin: 0 auto;
             padding: var(--space-md);
-            background: rgba(0,0,0,0.15);
+            background: rgba(0, 0, 0, 0.15);
             border-radius: 8px;
         }
 
@@ -251,7 +256,7 @@
             top: 20px;
             bottom: 20px;
             width: 3px;
-            background: linear-gradient(180deg, var(--platform-primary) 0%, rgba(0,0,0,0.1) 100%);
+            background: linear-gradient(180deg, var(--platform-primary) 0%, rgba(0, 0, 0, 0.1) 100%);
         }
 
         .timeline-entry {
@@ -268,7 +273,7 @@
             flex-shrink: 0;
             background: var(--platform-primary);
             border: 6px solid var(--archive-parchment);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -285,7 +290,7 @@
             background: white;
             padding: var(--space-md);
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             flex-grow: 1;
         }
 
@@ -323,7 +328,7 @@
             font-family: var(--font-interface);
             font-size: 0.8rem;
             padding: 0.5rem 1rem;
-            border: 1px solid rgba(0,0,0,0.2);
+            border: 1px solid rgba(0, 0, 0, 0.2);
             background: white;
             color: var(--archive-charcoal);
             border-radius: 4px;
@@ -343,7 +348,7 @@
             height: 100px;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .p-swatch {
@@ -351,7 +356,7 @@
             position: relative;
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            border-right: 1px solid rgba(255,255,255,0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .p-swatch:last-child {
@@ -390,7 +395,7 @@
             background: white;
             padding: var(--space-lg);
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             margin-bottom: var(--space-xl);
         }
 
@@ -432,7 +437,7 @@
             background: white;
             padding: var(--space-md);
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             text-decoration: none;
             color: inherit;
             transition: all 0.2s;
@@ -440,7 +445,7 @@
 
         .related-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
         }
 
         .related-name {
@@ -474,14 +479,29 @@
         }
 
         @media (max-width: 768px) {
-            .platform-name { font-size: 2.5rem; }
-            .timeline-container { padding-left: 0; }
-            .timeline-line { display: none; }
-            .timeline-marker { margin: 0 auto var(--space-sm); }
-            .timeline-entry { flex-direction: column; }
+            .platform-name {
+                font-size: 2.5rem;
+            }
+
+            .timeline-container {
+                padding-left: 0;
+            }
+
+            .timeline-line {
+                display: none;
+            }
+
+            .timeline-marker {
+                margin: 0 auto var(--space-sm);
+            }
+
+            .timeline-entry {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- BREADCRUMB -->
@@ -510,7 +530,10 @@
     <!-- MAIN CONTENT -->
     <main class="exhibit-content">
         <p class="exhibit-description">
-            AOL Instant Messenger wasn't just software—it was presence. That yellow running man meant someone was <em>there</em>. Away messages were poetry. Buddy lists were social hierarchies. The sound of the door opening ("Welcome!") and closing ("Goodbye!") marked the rhythm of teenage life. When it shut down on December 15, 2017, a generation mourned the death of a color that meant "I'm online."
+            AOL Instant Messenger wasn't just software—it was presence. That yellow running man meant someone was
+            <em>there</em>. Away messages were poetry. Buddy lists were social hierarchies. The sound of the door
+            opening ("Welcome!") and closing ("Goodbye!") marked the rhythm of teenage life. When it shut down on
+            December 15, 2017, a generation mourned the death of a color that meant "I'm online."
         </p>
 
         <!-- METADATA -->
@@ -560,10 +583,13 @@
                         <div class="timeline-year">1997-2005 — The Golden Years</div>
                         <h3 class="timeline-title">Yellow Running Man</h3>
                         <p class="timeline-desc">
-                            The iconic yellow-and-blue logo. That bright yellow wasn't a design choice—it was an emotion. It meant your crush was online. It meant your friends were available. Blue text on grey backgrounds, buddy lists organized by relationship status. Simple. Perfect.
+                            The iconic yellow-and-blue logo. That bright yellow wasn't a design choice—it was an
+                            emotion. It meant your crush was online. It meant your friends were available. Blue text on
+                            grey backgrounds, buddy lists organized by relationship status. Simple. Perfect.
                         </p>
                         <div class="palette-actions">
-                            <button class="action-btn" onclick="downloadPalette('AIM', '1997')">⬇ Download Palette</button>
+                            <button class="action-btn" onclick="downloadPalette('AIM', '1997')">⬇ Download
+                                Palette</button>
                         </div>
                         <div class="palette-strip">
                             <div class="p-swatch" style="background: #FFD900;" onclick="copyHex('#FFD900')">
@@ -589,10 +615,13 @@
                         <div class="timeline-year">2006-2011 — Triton Era</div>
                         <h3 class="timeline-title">Orange Glow</h3>
                         <p class="timeline-desc">
-                            AIM 6.0 "Triton" introduced gradients and glossy buttons. The yellow shifted toward orange. Tabs appeared. It looked more modern but felt less intimate. This was AIM trying to compete with MSN Messenger. The heart was still there, but the color was changing.
+                            AIM 6.0 "Triton" introduced gradients and glossy buttons. The yellow shifted toward orange.
+                            Tabs appeared. It looked more modern but felt less intimate. This was AIM trying to compete
+                            with MSN Messenger. The heart was still there, but the color was changing.
                         </p>
                         <div class="palette-actions">
-                            <button class="action-btn" onclick="downloadPalette('AIM', '2006')">⬇ Download Palette</button>
+                            <button class="action-btn" onclick="downloadPalette('AIM', '2006')">⬇ Download
+                                Palette</button>
                         </div>
                         <div class="palette-strip">
                             <div class="p-swatch" style="background: #FF9900;" onclick="copyHex('#FF9900')">
@@ -621,10 +650,13 @@
                         <div class="timeline-year">2014-2017 — The Fade</div>
                         <h3 class="timeline-title">Grey Ghost</h3>
                         <p class="timeline-desc">
-                            Everyone had moved to texting. The buddy list was empty. AOL stopped investing. The yellow faded to muted greys. On December 15, 2017, AIM shut down. The door closed sound played one last time. An era ended.
+                            Everyone had moved to texting. The buddy list was empty. AOL stopped investing. The yellow
+                            faded to muted greys. On December 15, 2017, AIM shut down. The door closed sound played one
+                            last time. An era ended.
                         </p>
                         <div class="palette-actions">
-                            <button class="action-btn" onclick="downloadPalette('AIM', '2014')">⬇ Download Palette</button>
+                            <button class="action-btn" onclick="downloadPalette('AIM', '2014')">⬇ Download
+                                Palette</button>
                         </div>
                         <div class="palette-strip">
                             <div class="p-swatch" style="background: #999999;" onclick="copyHex('#999999')">
@@ -694,4 +726,5 @@
     </script>
 
 </body>
+
 </html>

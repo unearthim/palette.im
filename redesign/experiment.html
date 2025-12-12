@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palette.im | The Archive (Redesign Experiment)</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            /* The base "Darkroom" palette - calm, neutral, letting the content shine */
+            --bg-deep: #050505;
+            --bg-surface: #111111;
+            --bg-card: #161616;
+
+            --text-primary: #e0e0e0;
+            --text-secondary: #888888;
+            --border-dim: #222222;
+
+            --accent-gold: #D4AF37;
+            /* A more muted, metallic gold */
+
+            --font-serif: 'Lora', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            font-family: var(--font-serif);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* --- typography --- */
+        h1,
+        h2,
+        h3 {
+            font-family: var(--font-sans);
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        /* --- layout --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header: Minimal & Quiet --- */
+        header {
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-dim);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        .logo span {
+            color: var(--text-primary);
+        }
+
+        /* --- Hero: The "Specimen" View --- */
+        /* Instead of a grid, we show ONE thing at a time to start */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-statement {
+            font-size: 3rem;
+            line-height: 1.1;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            background: linear-gradient(to bottom, #fff, #666);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-sub {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* --- The Archive Grid (The Solution) --- */
+        /* 
+           THE FIX:
+           The grid is monochromatic. 
+           Color is a privilege revealed only on interaction.
+        */
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1px;
+            /* Minimal gap */
+            background: var(--border-dim);
+            /* Creates borders */
+            margin: 60px 0 120px;
+            border: 1px solid var(--border-dim);
+        }
+
+        .item-card {
+            background: var(--bg-deep);
+            height: 320px;
+            padding: 30px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: background-color 0.4s ease;
+            overflow: hidden;
+            border: 1px solid transparent;
+            /* Stabilizes layout */
+        }
+
+        /* The "Ghost" State */
+        .item-card .swatch-preview {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #222;
+            /* Default dead state */
+            margin-bottom: 20px;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            filter: grayscale(100%) brightness(0.8);
+            opacity: 0.5;
+            position: relative;
+            z-index: 2;
+        }
+
+        .item-card h3 {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .item-card .meta {
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #444;
+            transition: color 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* The Glow Background - hidden by default */
+        .item-card .glow-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, var(--brand-color), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* --- INTERACTION --- */
+        .item-card:hover {
+            background: var(--bg-surface);
+            border-color: #333;
+        }
+
+        .item-card:hover .swatch-preview {
+            transform: scale(1.5);
+            filter: grayscale(0%) brightness(1);
+            opacity: 1;
+            background: var(--brand-color);
+            box-shadow: 0 10px 30px -5px var(--brand-color-dim);
+        }
+
+        .item-card:hover .glow-bg {
+            opacity: 0.15;
+            /* Subtle ambient lighting */
+        }
+
+        .item-card:hover h3 {
+            color: #fff;
+        }
+
+        .item-card:hover .meta {
+            color: var(--accent-gold);
+        }
+
+        /* The little 'color codes' list - hidden detail until hover */
+        .color-codes {
+            margin-top: auto;
+            display: flex;
+            gap: 5px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease 0.1s;
+        }
+
+        .item-card:hover .color-codes {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mini-chip {
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Palette<span>.im</span> // Archive</div>
+    </header>
+
+    <div class="container">
+
+        <div class="hero">
+            <h1 class="hero-statement">The colors we forgot<br>to save.</h1>
+            <p class="hero-sub">An interactive archive of the digital aesthetics that defined the browser wars, early
+                social media, and the web 1.0 era.</p>
+        </div>
+
+        <!-- 
+            GRID SYSTEM:
+            Items start "Dead" (Grey).
+            They come "Alive" (Color) on hover.
+            This prevents the 'rainbow vomit' effect.
+        -->
+        <div class="archive-grid">
+
+            <!-- NETSCAPE -->
+            <a href="#" class="item-card" style="--brand-color: #006666; --brand-color-dim: rgba(0, 102, 102, 0.4);">
+                <div class="glow-bg"></div>
+                <div class="swatch-preview" style="background: #006666;"></div>
+                <div class="content">
+                    <div class="meta">1994 &mdash; 2008</div>
+                    <h3>Netscape</h3>
+                    <div class="color-codes">
+                        <div class="mini-chip" style="background: #006666"></div>
+                        <div class="mini-chip" style="background: #336699"></div>
+                        <div class="mini-chip" style="background: #663399"></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- MYSPACE -->
+            <a href="#" class="item-card" style="--brand-color: #1C4E8C; --brand-color-dim: rgba(28, 78, 140, 0.4);">
+                <div class="glow-bg"></div>
+                <div class="swatch-preview" style="background: #1C4E8C;"></div>
+                <div class="content">
+                    <div class="meta">2003 &mdash; 2016</div>
+                    <h3>Myspace</h3>
+                    <div class="color-codes">
+                        <div class="mini-chip" style="background: #1C4E8C"></div>
+                        <div class="mini-chip" style="background: #FF6600"></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- GOOGLE READER -->
+            <a href="#" class="item-card" style="--brand-color: #EE802F; --brand-color-dim: rgba(238, 128, 47, 0.4);">
+                <div class="glow-bg"></div>
+                <div class="swatch-preview" style="background: #EE802F;"></div>
+                <div class="content">
+                    <div class="meta">2005 &mdash; 2013</div>
+                    <h3>Google Reader</h3>
+                    <div class="color-codes">
+                        <div class="mini-chip" style="background: #EE802F"></div>
+                        <div class="mini-chip" style="background: #DD4B39"></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- AIM -->
+            <a href="#" class="item-card" style="--brand-color: #FFD900; --brand-color-dim: rgba(255, 217, 0, 0.4);">
+                <div class="glow-bg"></div>
+                <div class="swatch-preview" style="background: #FFD900;"></div>
+                <div class="content">
+                    <div class="meta">1997 &mdash; 2017</div>
+                    <h3>AIM</h3>
+                    <div class="color-codes">
+                        <div class="mini-chip" style="background: #FFD900"></div>
+                        <div class="mini-chip" style="background: #0000CC"></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- ICQ -->
+            <a href="#" class="item-card" style="--brand-color: #01FF01; --brand-color-dim: rgba(1, 255, 1, 0.4);">
+                <div class="glow-bg"></div>
+                <div class="swatch-preview" style="background: #01FF01;"></div>
+                <div class="content">
+                    <div class="meta">1996 &mdash; 2010</div>
+                    <h3>ICQ</h3>
+                    <div class="color-codes">
+                        <div class="mini-chip" style="background: #01FF01"></div>
+                        <div class="mini-chip" style="background: #CC0000"></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- MSN -->
+            <a href="#" class="item-card" style="--brand-color: #0078D7; --brand-color-dim: rgba(0, 120, 215, 0.4);">
+                <div class="glow-bg"></div>
+                <div class="swatch-preview" style="background: #0078D7;"></div>
+                <div class="content">
+                    <div class="meta">1999 &mdash; 2013</div>
+                    <h3>MSN Messenger</h3>
+                    <div class="color-codes">
+                        <div class="mini-chip" style="background: #0078D7"></div>
+                        <div class="mini-chip" style="background: #FF6600"></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- VINE -->
+            <a href="#" class="item-card" style="--brand-color: #00BF8F; --brand-color-dim: rgba(0, 191, 143, 0.4);">
+                <div class="glow-bg"></div>
+                <div class="swatch-preview" style="background: #00BF8F;"></div>
+                <div class="content">
+                    <div class="meta">2013 &mdash; 2017</div>
+                    <h3>Vine</h3>
+                    <div class="color-codes">
+                        <div class="mini-chip" style="background: #00BF8F"></div>
+                        <div class="mini-chip" style="background: #333333"></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- PEBBLE -->
+            <a href="#" class="item-card" style="--brand-color: #FF4500; --brand-color-dim: rgba(255, 69, 0, 0.4);">
+                <div class="glow-bg"></div>
+                <div class="swatch-preview" style="background: #FF4500;"></div>
+                <div class="content">
+                    <div class="meta">2012 &mdash; 2016</div>
+                    <h3>Pebble</h3>
+                    <div class="color-codes">
+                        <div class="mini-chip" style="background: #FF4500"></div>
+                        <div class="mini-chip" style="background: #444444"></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- GEOCITIES -->
+            <a href="#" class="item-card" style="--brand-color: #FFFF00; --brand-color-dim: rgba(255, 255, 0, 0.4);">
+                <div class="glow-bg"></div>
+                <div class="swatch-preview" style="background: #FFFF00;"></div>
+                <div class="content">
+                    <div class="meta">1995 &mdash; 2009</div>
+                    <h3>Geocities</h3>
+                    <div class="color-codes">
+                        <div class="mini-chip" style="background: #FFFF00"></div>
+                        <div class="mini-chip" style="background: #000066"></div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- 
+       FLOURISH: A subtle intro animation to make it feel premium 
+    -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.item-card');
+            cards.forEach((card, i) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease, background-color 0.4s ease'; // re-add hover transition
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 + (i * 50));
+            });
+        });
+    </script>
+</body>
+
+</html>

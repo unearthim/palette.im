@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit a Platform | palette.im</title>
     <meta name="description" content="Help preserve digital history. Submit platforms for inclusion in the archive.">
-    
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -35,7 +36,8 @@
         {
           "@type": "Organization",
           "@id": "https://unearth.im/#organization",
-          "name": "unearth.im",
+          "name": "Unearth Heritage Foundry",
+"alternateName": ["Unearth Foundry","Archive & Anvil","Unearth Anvil","Unearth Works","Cultural Infrastructure Foundry"],
           "url": "https://unearth.im",
           "logo": {
             "@type": "ImageObject",
@@ -68,10 +70,12 @@
       ]
     }
     </script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
@@ -80,7 +84,7 @@
             --archive-charcoal: #2E2E2E;
             --archive-sienna: #A93400;
             --archive-grey: #666666;
-            
+
             --font-narrative: 'Lora', serif;
             --font-interface: 'Inter', sans-serif;
 
@@ -147,7 +151,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.15) 0%, transparent 60%);
+            background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
             pointer-events: none;
         }
 
@@ -161,7 +165,7 @@
         .hero-icon {
             font-size: 5rem;
             margin-bottom: var(--space-sm);
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .submit-title {
@@ -170,7 +174,7 @@
             font-size: 4rem;
             letter-spacing: -0.02em;
             margin-bottom: var(--space-sm);
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .submit-subtitle {
@@ -191,7 +195,7 @@
             background: white;
             padding: var(--space-lg);
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             margin-bottom: var(--space-xl);
             text-align: center;
         }
@@ -234,7 +238,7 @@
             background: white;
             padding: var(--space-lg);
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             margin-bottom: var(--space-xl);
         }
 
@@ -322,11 +326,17 @@
         }
 
         @media (max-width: 768px) {
-            .submit-title { font-size: 2.5rem; }
-            .example-platforms { grid-template-columns: 1fr; }
+            .submit-title {
+                font-size: 2.5rem;
+            }
+
+            .example-platforms {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <nav class="breadcrumb-nav">
@@ -352,7 +362,8 @@
             <div class="status-icon">🏗️</div>
             <h2 class="status-title">Submission Form Coming Soon</h2>
             <p class="status-desc">
-                We're building a proper submission system to collect platform nominations from the community. In the meantime, we're actively curating the archive based on historical significance and cultural impact.
+                We're building a proper submission system to collect platform nominations from the community. In the
+                meantime, we're actively curating the archive based on historical significance and cultural impact.
             </p>
             <div class="coming-soon-badge">Form Under Construction</div>
         </section>
@@ -360,9 +371,11 @@
         <section class="info-section">
             <h3 class="info-title">What We're Looking For</h3>
             <p class="info-text">
-                palette.im documents platforms that are <strong>truly dead</strong>—not just rebranded or acquired, but gone. The servers are off. The company dissolved. The domain expired. These are digital monuments to what was lost.
+                palette.im documents platforms that are <strong>truly dead</strong>—not just rebranded or acquired, but
+                gone. The servers are off. The company dissolved. The domain expired. These are digital monuments to
+                what was lost.
             </p>
-            
+
             <ul class="criteria-list">
                 <li class="criteria-item">
                     <strong>Defunct Platforms:</strong> Must be permanently shut down, not just deprecated or sunset
@@ -387,7 +400,7 @@
             <p class="info-text">
                 Future additions to the archive may include:
             </p>
-            
+
             <div class="example-platforms">
                 <div class="example-tag">Napster</div>
                 <div class="example-tag">LiveJournal</div>
@@ -414,4 +427,5 @@
     </main>
 
 </body>
+
 </html>

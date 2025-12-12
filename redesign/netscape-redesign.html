@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netscape Navigator (1994-2008) | palette.im Redesign</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            /* Darkroom Palette */
+            --bg-deep: #050505;
+            --bg-surface: #111111;
+            --bg-panel: #161616;
+
+            --text-primary: #e0e0e0;
+            --text-secondary: #888888;
+            --border-dim: #222222;
+
+            /* Brand Identity - Netscape */
+            --brand-primary: #006666;
+            /* The iconic teal */
+            --brand-accent: #336699;
+            /* Navigator Blue */
+
+            --font-serif: 'Lora', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        /* --- Global Reset & Type --- */
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            font-family: var(--font-serif);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-sans);
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* --- Header: The "Archive" Bar --- */
+        nav.archive-bar {
+            border-bottom: 1px solid var(--border-dim);
+            padding: 20px 0;
+            font-family: var(--font-sans);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav.archive-bar a:hover {
+            color: #fff;
+        }
+
+        .back-link span {
+            margin-right: 5px;
+        }
+
+        /* --- Hero: The "Specimen" --- */
+        .hero {
+            padding: 100px 0 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* The Logo Mark - glowing */
+        .specimen-mark {
+            width: 100px;
+            height: 100px;
+            background: var(--bg-surface);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #333;
+            margin-bottom: 40px;
+            box-shadow: 0 0 50px rgba(0, 102, 102, 0.1);
+            /* Subtle aura */
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        .specimen-mark::after {
+            content: 'N';
+            font-family: var(--font-sans);
+            font-weight: 900;
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        /* Hover effect: The mark "turns on" */
+        .hero:hover .specimen-mark {
+            box-shadow: 0 0 80px rgba(0, 102, 102, 0.4);
+            border-color: var(--brand-primary);
+            background: radial-gradient(circle at center, #004444, #002222);
+        }
+
+        h1.title {
+            font-size: 4rem;
+            line-height: 1;
+            margin-bottom: 15px;
+            background: linear-gradient(to bottom, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .dates {
+            font-family: var(--font-sans);
+            color: var(--brand-primary);
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        .epitaph {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+        /* --- The "Color DNA" Section (Timeline) --- */
+        .section-header {
+            border-top: 1px solid var(--border-dim);
+            margin-top: 80px;
+            padding-top: 60px;
+            margin-bottom: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .section-header span {
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 20px;
+            border-left: 1px solid var(--border-dim);
+        }
+
+        .era-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-dim);
+            margin-bottom: 40px;
+            padding: 40px;
+            position: relative;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .era-card:hover {
+            transform: translateX(10px);
+            border-color: #444;
+        }
+
+        /* Connecting dot */
+        .era-card::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: -66px;
+            /* 40px padding + 20px margin + shift */
+            width: 11px;
+            height: 11px;
+            background: var(--bg-deep);
+            border: 2px solid var(--text-secondary);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .era-card:hover::before {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+            box-shadow: 0 0 15px var(--accent-color);
+        }
+
+        .era-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .era-year {
+            font-family: var(--font-sans);
+            font-weight: 800;
+            font-size: 3rem;
+            color: var(--bg-panel);
+            line-height: 0.8;
+            -webkit-text-stroke: 1px var(--border-dim);
+            /* Outline text effect */
+            transition: all 0.3s;
+        }
+
+        .era-card:hover .era-year {
+            color: var(--bg-panel);
+            /* Keep fill dark */
+            -webkit-text-stroke: 1px var(--accent-color);
+            /* Light up outline */
+            opacity: 0.5;
+        }
+
+        .era-title h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .era-title p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .era-desc {
+            color: #aaa;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        /* --- Palette Swatches --- */
+        .palette-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .swatch {
+            height: 80px;
+            flex: 1;
+            position: relative;
+            cursor: pointer;
+            transition: flex 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            border-radius: 2px;
+            display: flex;
+            align-items: flex-end;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .swatch:hover {
+            flex: 2.5;
+            /* Grow on hover */
+        }
+
+        .hex-code {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s;
+            backdrop-filter: blur(4px);
+        }
+
+        .swatch:hover .hex-code {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Footer --- */
+        footer {
+            border-top: 1px solid var(--border-dim);
+            padding: 60px 0;
+            margin-top: 100px;
+            text-align: center;
+            color: #444;
+            font-size: 0.9rem;
+        }
+
+        /* Utility for quick coloring via inline styles */
+        .color-accent {
+            color: var(--accent-color);
+        }
+
+        /* Toast notification */
+        #toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="archive-bar container">
+        <a href="experiment.html" class="back-link"><span>&larr;</span> Archive Index</a>
+        <div>File No. 001 // NETSCAPE</div>
+        <div>palette.im</div>
+    </nav>
+
+    <div class="container">
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="specimen-mark"></div>
+            <h1 class="title">Netscape Navigator</h1>
+            <div class="dates">1994 &mdash; 2008</div>
+            <p class="epitaph">
+                "The browser that started the war. Before it was crushed by Internet Explorer, its cosmic teal defined
+                the palette of the early web."
+            </p>
+        </header>
+
+        <!-- Timeline Section -->
+        <div class="section-header">
+            <h2>Color Evolution</h2>
+            <span>Chroma Data</span>
+        </div>
+
+        <div class="timeline">
+
+            <!-- 1994 Era -->
+            <article class="era-card" style="--accent-color: #006666;">
+                <div class="era-header">
+                    <div class="era-title">
+                        <h3>The Navigator Era</h3>
+                        <p>Version 1.0 &mdash; The Launch</p>
+                    </div>
+                    <div class="era-year">94</div>
+                </div>
+                <div class="era-desc">
+                    The iconic, cosmic teal represented the vastness of 'Cyberspace'. This specific hex defined the link
+                    between the user and the infinite.
+                </div>
+                <div class="palette-row">
+                    <!-- Netscape Teal -->
+                    <div class="swatch" style="background: #006666;" onclick="copyHex('#006666')">
+                        <span class="hex-code">#006666</span>
+                    </div>
+                    <!-- Windows Grey -->
+                    <div class="swatch" style="background: #C0C0C0;" onclick="copyHex('#C0C0C0')">
+                        <span class="hex-code">#C0C0C0</span>
+                    </div>
+                    <!-- Hyperlink Blue -->
+                    <div class="swatch" style="background: #0000FF;" onclick="copyHex('#0000FF')">
+                        <span class="hex-code">#0000FF</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 1997 Era -->
+            <article class="era-card" style="--accent-color: #663399;">
+                <div class="era-header">
+                    <div class="era-title">
+                        <h3>The Communicator</h3>
+                        <p>Version 4.0 &mdash; The Rebrand</p>
+                    </div>
+                    <div class="era-year">97</div>
+                </div>
+                <div class="era-desc">
+                    Fighting back. The rebrand introduced deep purples and gradients, attempting to look more
+                    'enterprise' and modern as the browser wars heated up.
+                </div>
+                <div class="palette-row">
+                    <div class="swatch" style="background: #336699;" onclick="copyHex('#336699')">
+                        <span class="hex-code">#336699</span>
+                    </div>
+                    <div class="swatch" style="background: #663399;" onclick="copyHex('#663399')">
+                        <span class="hex-code">#663399</span>
+                    </div>
+                    <div class="swatch" style="background: #006666;" onclick="copyHex('#006666')">
+                        <span class="hex-code">#006666</span>
+                    </div>
+                    <div class="swatch" style="background: #E6E6E6; color: #333;" onclick="copyHex('#E6E6E6')">
+                        <span class="hex-code" style="color: #fff; text-shadow: 0 1px 2px black;">#E6E6E6</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2002 Era -->
+            <article class="era-card" style="--accent-color: #4D4D4D;">
+                <div class="era-header">
+                    <div class="era-title">
+                        <h3>The Darkening</h3>
+                        <p>Version 7.0 &mdash; The End</p>
+                    </div>
+                    <div class="era-year">02</div>
+                </div>
+                <div class="era-desc">
+                    Defeat. The palette shifted to muted greys and charcoals. The cosmic teal was gone, replaced by
+                    corporate neutrality before the project was finally dissolved.
+                </div>
+                <div class="palette-row">
+                    <div class="swatch" style="background: #4D4D4D;" onclick="copyHex('#4D4D4D')">
+                        <span class="hex-code">#4D4D4D</span>
+                    </div>
+                    <div class="swatch" style="background: #336699;" onclick="copyHex('#336699')">
+                        <span class="hex-code">#336699</span>
+                    </div>
+                    <div class="swatch" style="background: #999999;" onclick="copyHex('#999999')">
+                        <span class="hex-code">#999999</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2025 palette.im // Unearth Heritage Foundry
+    </footer>
+
+    <div id="toast">Copied to clipboard</div>
+
+    <script>
+        function copyHex(color) {
+            navigator.clipboard.writeText(color);
+            const toast = document.getElementById('toast');
+            toast.innerText = `Copied ${color}`;
+            toast.style.opacity = '1';
+            toast.style.bottom = '40px';
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.bottom = '30px';
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friendster (2002-2015) | palette.im</title>
-    <meta name="description" content="The social network that invented social networking. Collapsed under its own success before Facebook learned from its mistakes.">
-    
+    <meta name="description"
+        content="The social network that invented social networking. Collapsed under its own success before Facebook learned from its mistakes.">
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -36,7 +38,8 @@
         {
           "@type": "Organization",
           "@id": "https://unearth.im/#organization",
-          "name": "unearth.im",
+          "name": "Unearth Heritage Foundry",
+"alternateName": ["Unearth Foundry","Archive & Anvil","Unearth Anvil","Unearth Works","Cultural Infrastructure Foundry"],
           "url": "https://unearth.im",
           "logo": {
             "@type": "ImageObject",
@@ -69,10 +72,12 @@
       ]
     }
     </script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
@@ -81,9 +86,9 @@
             --archive-charcoal: #2E2E2E;
             --archive-sienna: #A93400;
             --archive-grey: #666666;
-            
+
             --platform-primary: #278D27;
-            
+
             --font-narrative: 'Lora', serif;
             --font-interface: 'Inter', sans-serif;
 
@@ -150,7 +155,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.15) 0%, transparent 60%);
+            background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
             pointer-events: none;
         }
 
@@ -167,7 +172,7 @@
             border-radius: 50%;
             background: var(--platform-primary);
             border: 4px solid white;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
             margin: 0 auto var(--space-md);
         }
 
@@ -177,7 +182,7 @@
             font-size: 3.5rem;
             letter-spacing: -0.02em;
             margin-bottom: var(--space-sm);
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
         }
 
         .platform-dates {
@@ -196,7 +201,7 @@
             max-width: 700px;
             margin: 0 auto;
             padding: var(--space-md);
-            background: rgba(0,0,0,0.2);
+            background: rgba(0, 0, 0, 0.2);
             border-radius: 8px;
         }
 
@@ -248,7 +253,7 @@
             top: 20px;
             bottom: 20px;
             width: 3px;
-            background: linear-gradient(180deg, var(--platform-primary) 0%, rgba(0,0,0,0.1) 100%);
+            background: linear-gradient(180deg, var(--platform-primary) 0%, rgba(0, 0, 0, 0.1) 100%);
         }
 
         .timeline-entry {
@@ -265,7 +270,7 @@
             flex-shrink: 0;
             background: var(--platform-primary);
             border: 6px solid var(--archive-parchment);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -282,7 +287,7 @@
             background: white;
             padding: var(--space-md);
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             flex-grow: 1;
         }
 
@@ -320,7 +325,7 @@
             font-family: var(--font-interface);
             font-size: 0.8rem;
             padding: 0.5rem 1rem;
-            border: 1px solid rgba(0,0,0,0.2);
+            border: 1px solid rgba(0, 0, 0, 0.2);
             background: white;
             color: var(--archive-charcoal);
             border-radius: 4px;
@@ -340,7 +345,7 @@
             height: 100px;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .p-swatch {
@@ -348,7 +353,7 @@
             position: relative;
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            border-right: 1px solid rgba(255,255,255,0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .p-swatch:last-child {
@@ -386,7 +391,7 @@
             background: white;
             padding: var(--space-lg);
             border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             margin-bottom: var(--space-xl);
         }
 
@@ -427,7 +432,7 @@
             background: white;
             padding: var(--space-md);
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             text-decoration: none;
             color: inherit;
             transition: all 0.2s;
@@ -435,7 +440,7 @@
 
         .related-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
         }
 
         .related-name {
@@ -469,14 +474,29 @@
         }
 
         @media (max-width: 768px) {
-            .platform-name { font-size: 2.5rem; }
-            .timeline-container { padding-left: 0; }
-            .timeline-line { display: none; }
-            .timeline-marker { margin: 0 auto var(--space-sm); }
-            .timeline-entry { flex-direction: column; }
+            .platform-name {
+                font-size: 2.5rem;
+            }
+
+            .timeline-container {
+                padding-left: 0;
+            }
+
+            .timeline-line {
+                display: none;
+            }
+
+            .timeline-marker {
+                margin: 0 auto var(--space-sm);
+            }
+
+            .timeline-entry {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <nav class="breadcrumb-nav">
@@ -495,14 +515,17 @@
             <h1 class="platform-name">Friendster</h1>
             <div class="platform-dates">2002 – 2015</div>
             <p class="platform-epitaph">
-                "Collapsed under its own success. Technical failures drove users to Facebook. Pivoted to gaming, then died."
+                "Collapsed under its own success. Technical failures drove users to Facebook. Pivoted to gaming, then
+                died."
             </p>
         </div>
     </section>
 
     <main class="exhibit-content">
         <p class="exhibit-description">
-            The original social network. Before Facebook, before Myspace—Friendster invented the friend graph, the profile page, the testimonial. It had 3 million users in its first 3 months. Then the servers melted. Load times hit 40 seconds. Facebook launched. The rest is history.
+            The original social network. Before Facebook, before Myspace—Friendster invented the friend graph, the
+            profile page, the testimonial. It had 3 million users in its first 3 months. Then the servers melted. Load
+            times hit 40 seconds. Facebook launched. The rest is history.
         </p>
 
         <section class="metadata-section">
@@ -549,10 +572,14 @@
                         <div class="timeline-year">2002 — Friendster 1.0</div>
                         <h3 class="timeline-title">The Social Pioneer</h3>
                         <p class="timeline-desc">
-                            Warm, inviting green—the color of friendship. The original Friendster was clean, optimistic, simple. White backgrounds let profiles shine. Blue links were welcoming. This was social networking in its purest form: connecting friends of friends, building community. 3 million users in 3 months. Then the servers crashed.
+                            Warm, inviting green—the color of friendship. The original Friendster was clean, optimistic,
+                            simple. White backgrounds let profiles shine. Blue links were welcoming. This was social
+                            networking in its purest form: connecting friends of friends, building community. 3 million
+                            users in 3 months. Then the servers crashed.
                         </p>
                         <div class="palette-actions">
-                            <button class="action-btn" onclick="downloadPalette('Friendster', '2002')">⬇ Download Palette</button>
+                            <button class="action-btn" onclick="downloadPalette('Friendster', '2002')">⬇ Download
+                                Palette</button>
                         </div>
                         <div class="palette-strip">
                             <div class="p-swatch" style="background: #278D27;" onclick="copyHex('#278D27')">
@@ -577,10 +604,14 @@
                         <div class="timeline-year">2005 — The Redesign</div>
                         <h3 class="timeline-title">Fighting Back</h3>
                         <p class="timeline-desc">
-                            Friendster tried to modernize. Brighter colors appeared—pink accents for personality, yellow for highlights. The green remained but the palette got busier. They were competing with Myspace's customization and Facebook's clean interface. Page load times were still terrible. Users were leaving. The palette felt desperate.
+                            Friendster tried to modernize. Brighter colors appeared—pink accents for personality, yellow
+                            for highlights. The green remained but the palette got busier. They were competing with
+                            Myspace's customization and Facebook's clean interface. Page load times were still terrible.
+                            Users were leaving. The palette felt desperate.
                         </p>
                         <div class="palette-actions">
-                            <button class="action-btn" onclick="downloadPalette('Friendster', '2005')">⬇ Download Palette</button>
+                            <button class="action-btn" onclick="downloadPalette('Friendster', '2005')">⬇ Download
+                                Palette</button>
                         </div>
                         <div class="palette-strip">
                             <div class="p-swatch" style="background: #278D27;" onclick="copyHex('#278D27')">
@@ -608,10 +639,14 @@
                         <div class="timeline-year">2011 — The Gaming Pivot</div>
                         <h3 class="timeline-title">Social Network No More</h3>
                         <p class="timeline-desc">
-                            Friendster gave up on social networking. It became a gaming platform in Asia. Orange dominated—the color of gaming energy. The green was gone. Purple and yellow exploded across the interface. This was chaos. The original vision was dead. It was now just another casual gaming portal, and not a good one.
+                            Friendster gave up on social networking. It became a gaming platform in Asia. Orange
+                            dominated—the color of gaming energy. The green was gone. Purple and yellow exploded across
+                            the interface. This was chaos. The original vision was dead. It was now just another casual
+                            gaming portal, and not a good one.
                         </p>
                         <div class="palette-actions">
-                            <button class="action-btn" onclick="downloadPalette('Friendster', '2011')">⬇ Download Palette</button>
+                            <button class="action-btn" onclick="downloadPalette('Friendster', '2011')">⬇ Download
+                                Palette</button>
                         </div>
                         <div class="palette-strip">
                             <div class="p-swatch" style="background: #FF6600;" onclick="copyHex('#FF6600')">
@@ -636,10 +671,14 @@
                         <div class="timeline-year">2015 — The End</div>
                         <h3 class="timeline-title">Complete Shutdown</h3>
                         <p class="timeline-desc">
-                            On June 14, 2015, Friendster shut down completely. All profiles, photos, testimonials—deleted. The gaming pivot failed. The original green that promised friendship was a distant memory. Grey and black marked the final days. The platform that invented social networking died in obscurity, having sold its patents to Facebook for $40 million.
+                            On June 14, 2015, Friendster shut down completely. All profiles, photos,
+                            testimonials—deleted. The gaming pivot failed. The original green that promised friendship
+                            was a distant memory. Grey and black marked the final days. The platform that invented
+                            social networking died in obscurity, having sold its patents to Facebook for $40 million.
                         </p>
                         <div class="palette-actions">
-                            <button class="action-btn" onclick="downloadPalette('Friendster', '2015')">⬇ Download Palette</button>
+                            <button class="action-btn" onclick="downloadPalette('Friendster', '2015')">⬇ Download
+                                Palette</button>
                         </div>
                         <div class="palette-strip">
                             <div class="p-swatch" style="background: #666666;" onclick="copyHex('#666666')">
@@ -704,4 +743,5 @@
     </script>
 
 </body>
+
 </html>
